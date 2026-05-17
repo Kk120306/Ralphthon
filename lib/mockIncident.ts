@@ -246,20 +246,28 @@ export function getRawTimelineEvents(
         }
       | undefined;
     events.push({
+      id: String(authEvent.id),
       time: shortTime(authEvent.timestamp as string),
       source: "Auth",
-      text: `${actor?.email ?? "Developer"} login from ${client?.geographicalContext?.city ?? "unknown location"} (${client?.ipAddress ?? "unknown IP"}) on ${client?.device ?? "unknown device"}`,
+      text: `Login from ${client?.geographicalContext?.city ?? "unknown location"} for ${actor?.email ?? "developer"} (${client?.ipAddress ?? "unknown IP"}) on ${client?.device ?? "unknown device"}`,
       severity: "HIGH",
+      raw: authEvent as Record<string, unknown>,
+      linkedAgent: "Auth Agent",
+      correlationTags: ["same user/IP", "credential theft", "MFA passed"],
     });
   }
   if (secretEvent) {
     const secret = secretEvent.secret as { name?: string } | undefined;
     const request = secretEvent.request as { remoteAddress?: string } | undefined;
     events.push({
+      id: String(secretEvent.id),
       time: shortTime(secretEvent.timestamp as string),
       source: "Secrets",
       text: `${secret?.name ?? "Production secret"} accessed${request?.remoteAddress ? ` from ${request.remoteAddress}` : ""}`,
       severity: "HIGH",
+      raw: secretEvent as Record<string, unknown>,
+      linkedAgent: "Auth Agent",
+      correlationTags: ["same user/IP", "secret access", "temporal proximity"],
     });
   }
   if (githubEvent) {
@@ -268,26 +276,38 @@ export function getRawTimelineEvents(
       | undefined;
     const commit = payload?.commits?.[0];
     events.push({
+      id: String(githubEvent.id),
       time: shortTime(githubEvent.timestamp as string),
       source: "GitHub",
       text: `Commit ${commit?.sha ?? "unknown"} adds dependency ${dependency}`,
       severity: "CRITICAL",
+      raw: githubEvent as Record<string, unknown>,
+      linkedAgent: "Code Agent",
+      correlationTags: ["dependency change", "same developer", "typosquat"],
     });
   }
   if (cicdEvent) {
     events.push({
+      id: String(cicdEvent.id),
       time: shortTime(cicdEvent.timestamp as string),
       source: "CI/CD",
       text: `${String(cicdEvent.workflow ?? "deployment")} workflow completed ${String(cicdEvent.conclusion ?? "unknown")}`,
       severity: "HIGH",
+      raw: cicdEvent as Record<string, unknown>,
+      linkedAgent: "Code Agent",
+      correlationTags: ["deployed after commit", "production deploy"],
     });
   }
   if (networkEvent) {
     events.push({
+      id: String(networkEvent.id),
       time: shortTime(networkEvent.timestamp),
       source: "Network",
       text: `${formatGb(networkEvent.bytesOut ?? 0)} outbound HTTPS to ${networkEvent.dstAddr ?? "unknown destination"}`,
       severity: "CRITICAL",
+      raw: networkEvent,
+      linkedAgent: "Network Agent",
+      correlationTags: ["egress after deploy", "unapproved destination", "volume anomaly"],
     });
   }
 

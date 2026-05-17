@@ -207,12 +207,18 @@ function normalizeOpenAIFilesChanged(value: unknown): MockPrResult["filesChanged
 
   const allowed = new Set(["modified", "removed", "added"]);
   return value.map((item, index) => {
+    if (typeof item === "string") {
+      return { path: item, changeType: "modified" as const };
+    }
     const record = item as Record<string, unknown>;
-    const rawChangeType = requireString(record.changeType, `mockPrResult.filesChanged[${index}].changeType`).toLowerCase();
+    const rawChangeType = requireString(
+      record.changeType ?? record.change_type ?? record.change ?? record.status ?? record.type ?? "modified",
+      `mockPrResult.filesChanged[${index}].changeType`,
+    ).toLowerCase();
     const changeType =
       rawChangeType === "changed" || rawChangeType === "updated" || rawChangeType === "modified"
         ? "modified"
-        : rawChangeType === "deleted" || rawChangeType === "removed"
+        : rawChangeType === "delete" || rawChangeType === "deleted" || rawChangeType === "remove" || rawChangeType === "removed"
           ? "removed"
           : rawChangeType === "created" || rawChangeType === "added"
             ? "added"
@@ -221,24 +227,73 @@ function normalizeOpenAIFilesChanged(value: unknown): MockPrResult["filesChanged
       throw new Error(`OpenAI response used unsupported file change type: ${rawChangeType}`);
     }
     return {
-      path: requireString(record.path, `mockPrResult.filesChanged[${index}].path`),
+      path: requireString(
+        record.path ??
+          record.filePath ??
+          record.file_path ??
+          record.fileName ??
+          record.file_name ??
+          record.file ??
+          record.filename ??
+          record.name,
+        `mockPrResult.filesChanged[${index}].path`,
+      ),
       changeType: changeType as "modified" | "removed" | "added",
     };
   });
 }
 
 function normalizeOpenAIMockPrResult(value: Record<string, unknown>): MockPrResult {
+  const patch =
+    value.patch ??
+    value.diff ??
+    value.codePatch ??
+    value.code_patch ??
+    value.codeDiff ??
+    value.code_diff ??
+    value.solutionPatch ??
+    value.solution_patch ??
+    value.solution ??
+    value.code ??
+    value.patchSolution ??
+    value.patch_or_code_diff_style_solution ??
+    value["patch or code-diff style solution"] ??
+    value["code-diff style solution"];
+  if (patch === undefined) {
+    console.warn("OpenAI mock PR result omitted patch-like field. Keys:", Object.keys(value).join(", "));
+  }
+  const validationSource =
+    value.validationNotes ??
+    value.validation_notes ??
+    value.testValidationNotes ??
+    value.test_validation_notes ??
+    value.testsOrValidationNotes ??
+    value.test_or_validation_notes ??
+    value.validation ??
+    value.notes ??
+    value.tests ??
+    [
+      "Review the generated patch against package.json and package-lock.json.",
+      "Run dependency validation and the existing test/build suite before resuming deployment.",
+    ];
   return {
     source: "openai",
     title: requireString(value.title, "mockPrResult.title"),
     summary: requireString(value.summary, "mockPrResult.summary"),
-    filesChanged: normalizeOpenAIFilesChanged(value.filesChanged),
-    patch: requireString(value.patch, "mockPrResult.patch"),
+    filesChanged: normalizeOpenAIFilesChanged(value.filesChanged ?? value.files_changed ?? value.files),
+    patch: Array.isArray(patch)
+      ? normalizeRequiredDisplayList(patch, "mockPrResult.patch").join("\n")
+      : patch && typeof patch === "object"
+        ? JSON.stringify(patch, null, 2)
+        : requireString(patch, "mockPrResult.patch"),
     riskRemovalExplanation: requireString(
-      value.riskRemovalExplanation,
+      value.riskRemovalExplanation ?? value.risk_removal_explanation ?? value.explanation,
       "mockPrResult.riskRemovalExplanation",
     ),
-    validationNotes: normalizeRequiredDisplayList(value.validationNotes, "mockPrResult.validationNotes"),
+    validationNotes:
+      typeof validationSource === "string"
+        ? [validationSource]
+        : normalizeRequiredDisplayList(validationSource, "mockPrResult.validationNotes"),
   };
 }
 
@@ -283,11 +338,30 @@ function normalizeDisplayList(value: unknown): string[] | undefined {
   return normalized.length ? normalized : undefined;
 }
 
+const EVIDENCE_ID_PATTERN = /\b(?:okta-ev|vault-audit|gh|gha|flow)-[a-z0-9-]+\b/gi;
+
+function extractEvidenceIds(...values: unknown[]): string[] | undefined {
+  const ids = new Set<string>();
+  for (const value of values) {
+    const text = Array.isArray(value) ? value.join(" ") : typeof value === "string" ? value : "";
+    for (const match of text.matchAll(EVIDENCE_ID_PATTERN)) ids.add(match[0]);
+  }
+  return ids.size ? Array.from(ids) : undefined;
+}
+
 function toAgentFinding(
   raw: Record<string, unknown>,
   agent: AgentFinding["agent"],
   key: AgentKey,
 ): AgentFinding {
+  const fallbackEvidenceIds: Partial<Record<AgentKey, string[]>> = {
+    intake: ["okta-ev-31847", "vault-audit-29401", "gh-48291", "gha-91024", "flow-910882"],
+    auth: ["okta-ev-31847", "vault-audit-29401"],
+    code: ["gh-48291", "gha-91024"],
+    network: ["flow-910882"],
+    master: ["okta-ev-31847", "vault-audit-29401", "gh-48291", "gha-91024", "flow-910882"],
+    remediation: ["gh-48291", "gha-91024", "flow-910882"],
+  };
   return {
     agent,
     status: "complete",
@@ -306,6 +380,7 @@ function toAgentFinding(
     recovery: normalizeDisplayList(raw.recovery),
     postIncident: normalizeDisplayList(raw.postIncident),
     checklist: normalizeDisplayList(raw.checklist),
+    evidenceIds: extractEvidenceIds(raw.evidenceIds, raw.keyFindings, raw.summary) ?? fallbackEvidenceIds[key],
   };
 }
 
@@ -400,7 +475,11 @@ export async function runInvestigation(
 
     const mockPrResult = await generateOpenAIMockPrResult(findings.master);
     return assembleResponse(scenarioId, findings, mockPrResult);
-  } catch {
+  } catch (error) {
+    console.warn(
+      "OpenAI investigation path failed; using deterministic fallback.",
+      error instanceof Error ? error.message : error,
+    );
     return getFallbackInvestigation(scenarioId);
   }
 }

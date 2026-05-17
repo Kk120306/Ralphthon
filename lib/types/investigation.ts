@@ -31,6 +31,7 @@ export interface AgentFinding {
   recovery?: string[];
   postIncident?: string[];
   checklist?: string[];
+  evidenceIds?: string[];
 }
 
 export interface MockPrResult {
@@ -44,11 +45,24 @@ export interface MockPrResult {
 }
 
 export interface RawTimelineEvent {
+  id?: string;
   time: string;
   source: string;
   text: string;
   severity: "HIGH" | "CRITICAL";
+  raw?: Record<string, unknown>;
+  linkedAgent?: AgentName;
+  correlationTags?: string[];
 }
+
+export type SimulationPhase =
+  | "idle"
+  | "streaming-events"
+  | "running-agents"
+  | "correlating"
+  | "remediation"
+  | "complete"
+  | "error";
 
 export interface InvestigationResponse {
   incidentName: string;

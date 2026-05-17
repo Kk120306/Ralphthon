@@ -1,6 +1,6 @@
 import { chromium } from "playwright";
 
-const url = process.env.E2E_URL ?? "http://localhost:3000";
+const url = process.env.E2E_URL ?? "http://localhost:3000/dashboard";
 const executablePath = process.env.CHROME_PATH ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const errors = [];
 
@@ -31,8 +31,25 @@ if (await page.getByText("Login from Moscow").isVisible().catch(() => false)) {
   errors.push("Raw event timeline was not empty before the simulation started");
 }
 
-// Reset during a just-started run should not allow stale fetch/timer results to repopulate the UI.
+// Timeline controls: events reveal gradually; pause freezes; step advances one; resume continues.
 await page.getByRole("button", { name: /Run Supply-Chain Attack Scenario/i }).click();
+await page.getByText("Login from Moscow").waitFor({ timeout: 6_000 });
+await page.getByRole("button", { name: /Pause/i }).click();
+const pausedCount = await page.getByTestId("raw-event").count();
+await page.waitForTimeout(1_500);
+const afterPauseCount = await page.getByTestId("raw-event").count();
+if (afterPauseCount !== pausedCount) errors.push("Pause did not freeze raw event reveal count");
+await page.getByRole("button", { name: /Step/i }).click();
+const afterStepCount = await page.getByTestId("raw-event").count();
+if (afterStepCount !== Math.min(pausedCount + 1, 5)) errors.push("Step did not reveal exactly one next raw event");
+await page.getByTestId("raw-event").first().click();
+await page.getByTestId("evidence-drawer").waitFor({ timeout: 2_000 });
+await page.getByText("Relevant JSON excerpt").waitFor();
+await page.getByRole("button", { name: "Close evidence drawer", exact: true }).click();
+await page.getByRole("button", { name: /Resume/i }).click();
+await page.getByText("10.4GB outbound HTTPS").waitFor({ timeout: 7_000 });
+
+// Reset during a running scenario should not allow stale fetch/timer results to repopulate the UI.
 await page.getByRole("button", { name: "Reset", exact: true }).click();
 await page.waitForTimeout(2_000);
 const idleText = await page.locator("header").textContent();
@@ -41,26 +58,44 @@ if (!(await page.getByText("0/6 done").isVisible())) errors.push("Reset did not 
 if (await page.getByText("Login from Moscow").isVisible().catch(() => false)) {
   errors.push("Reset did not clear raw timeline events");
 }
+if (await page.getByTestId("evidence-drawer").isVisible().catch(() => false)) {
+  errors.push("Reset did not clear evidence drawer");
+}
 
 // Full happy path.
 await page.getByRole("button", { name: /Run Supply-Chain Attack Scenario/i }).click();
-await page.getByText("Login from Moscow").waitFor({ timeout: 5_000 });
-await page.getByText("10.4GB outbound HTTPS").waitFor({ timeout: 7_000 });
+await page.getByText("Login from Moscow").waitFor({ timeout: 6_000 });
+await page.getByText("10.4GB outbound HTTPS").waitFor({ timeout: 8_000 });
 await page.getByText("✓ complete").waitFor({ timeout: 90_000 });
 await page.getByText("84").first().waitFor({ timeout: 5_000 });
+await page.getByText("Correlation graph").waitFor();
+await page.getByText("egress after deploy").first().waitFor();
 await page.getByText("Final incident report").waitFor();
+await page.getByRole("button", { name: "Timeline" }).click();
+await page.getByRole("button", { name: "Evidence" }).click();
+await page.getByRole("button", { name: "MITRE" }).click();
+await page.getByRole("button", { name: "Remediation", exact: true }).click();
+await page.getByRole("button", { name: /Copy incident brief/i }).click();
 await page.getByText("Mock remediation PR").waitFor();
-await page.getByText("Remove suspicious dependency (lodash-utilz)").waitFor();
+await page.getByText("Remove suspicious dependency (lodash-utilz)").first().waitFor();
+await page.getByRole("button", { name: /Hide diff/i }).click();
+await page.getByRole("button", { name: /Show diff/i }).click();
+await page.getByRole("button", { name: /Copy patch/i }).click();
 await page.getByText("T1078").waitFor();
 await page.getByText("T1552").waitFor();
 await page.getByText("T1195").waitFor();
 await page.getByText("T1041").waitFor();
 
+// Agent card expands after completion and shows evidence/summary details.
+await page.getByTestId("agent-card-auth-agent").getByRole("button").click();
+await page.getByText("Evidence IDs").waitFor();
+await page.getByText("okta-ev-31847").first().waitFor();
+
 // Checklist interaction.
 await page.getByRole("button", { name: /Run all/i }).click();
-await page.getByText("Disable compromised developer account").waitFor();
+await page.getByText("Disable compromised developer account").first().waitFor();
 
-// Final reset should clear completed state.
+// Final reset should clear completed state, drawer, expanded cards, graph, final report, and copied state.
 await page.getByRole("button", { name: "Reset", exact: true }).click();
 await page.waitForTimeout(500);
 const resetHeader = await page.locator("header").textContent();
@@ -69,6 +104,12 @@ if (!(await page.getByText("0/6 done").isVisible())) errors.push("Final reset di
 if (await page.getByText("Login from Moscow").isVisible().catch(() => false)) {
   errors.push("Final reset did not clear raw timeline events");
 }
+if (await page.getByText("Evidence IDs").isVisible().catch(() => false)) {
+  errors.push("Final reset did not clear expanded agent details");
+}
+if (await page.getByText("Mock remediation PR").isVisible().catch(() => false)) {
+  errors.push("Final reset did not clear mock PR panel");
+}
 
 await browser.close();
 
@@ -76,4 +117,4 @@ if (errors.length > 0) {
   console.error(JSON.stringify({ ok: false, errors }, null, 2));
   process.exit(1);
 }
-console.log(JSON.stringify({ ok: true, checked: ["hydration console", "initial render", "empty raw timeline", "progressive raw timeline", "reset race", "full run", "risk score", "final report", "MITRE", "mock PR", "checklist", "final reset"] }, null, 2));
+console.log(JSON.stringify({ ok: true, checked: ["hydration console", "initial render", "empty raw timeline", "progressive raw timeline", "pause", "resume", "step", "evidence drawer", "reset race", "full run", "risk score", "correlation graph", "agent expand", "final report tabs", "copy buttons", "MITRE", "mock PR", "checklist", "final reset"] }, null, 2));

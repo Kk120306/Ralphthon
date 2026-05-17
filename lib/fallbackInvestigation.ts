@@ -103,6 +103,7 @@ export function getFallbackInvestigation(
         "Temporal clustering between 09:12 and 09:52 +08:00",
         "Recommend Auth, Code, and Network specialist analysis",
       ],
+      evidenceIds: ["okta-ev-31847", "vault-audit-29401", "gh-48291", "gha-91024", "flow-910882"],
     },
     {
       agent: "Auth Agent",
@@ -117,6 +118,7 @@ export function getFallbackInvestigation(
         "Vault vault-audit-29401 — rare production payment secret read",
         "High likelihood of credential compromise despite MFA success",
       ],
+      evidenceIds: ["okta-ev-31847", "vault-audit-29401"],
       mitreMappings: mitreMappings.filter((m) => m.id === "T1078" || m.id === "T1552"),
     },
     {
@@ -132,6 +134,7 @@ export function getFallbackInvestigation(
         "packageManifests show lodash-utilz added after snapshot c3d81f0",
         "gha-91024 production deploy — dependency audit not run",
       ],
+      evidenceIds: ["gh-48291", "gha-91024"],
       mitreMappings: mitreMappings.filter((m) => m.id === "T1195"),
     },
     {
@@ -147,6 +150,7 @@ export function getFallbackInvestigation(
         "Volume highly anomalous vs 400 MB/hour baseline",
         "Cannot confirm specific exfiltrated data from netflow alone",
       ],
+      evidenceIds: ["flow-910882"],
       mitreMappings: mitreMappings.filter((m) => m.id === "T1041"),
     },
     {
@@ -162,6 +166,7 @@ export function getFallbackInvestigation(
       attackChain: chainLabels,
       timeline,
       mitreMappings,
+      evidenceIds: ["okta-ev-31847", "vault-audit-29401", "gh-48291", "gha-91024", "flow-910882"],
     },
     {
       agent: "Remediation Agent",
@@ -172,6 +177,7 @@ export function getFallbackInvestigation(
       recovery: ["Redeploy from last known-good build without lodash-utilz"],
       postIncident: remediation.slice(6),
       checklist: remediation,
+      evidenceIds: ["gh-48291", "gha-91024", "flow-910882"],
     },
   ];
 
