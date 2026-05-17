@@ -1,2 +1,94 @@
+# --- Dependencies ---
+node_modules/
+.pnpm-store/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# --- Next.js ---
+.next/
+out/
+.vercel/
+*.pem
+# --- Build / compile output ---
+dist/
+build/
+*.tsbuildinfo
+
+# --- Environment & secrets ---
 .env
-.env
+.env.*
+!.env.example
+!.env*.example
+
+# --- Logs & runtime ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.pid
+*.seed
+*.pid.lock
+
+# --- Testing & coverage ---
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+blob-report/
+
+# --- Caches ---
+.cache/
+.parcel-cache/
+.turbo/
+.eslintcache
+.stylelintcache
+*.cache
+
+# --- Python (scripts/) ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+.env.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.eggs/
+dist-python/
+wheelhouse/
+
+# --- OS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Editors & IDEs ---
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-*
+
+# --- VS Code (optional — uncomment if team prefers local-only settings) ---
+# .vscode/*
+
+# --- Misc ---
