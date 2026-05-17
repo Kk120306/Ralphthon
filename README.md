@@ -3,12 +3,10 @@
 <br/>
 
 ```
-███████╗███████╗███╗   ██╗████████╗██╗███╗   ██╗███████╗██╗      ███████╗██╗    ██╗ █████╗ ██████╗ ███╗   ███╗
-██╔════╝██╔════╝████╗  ██║╚══██╔══╝██║████╗  ██║██╔════╝██║      ██╔════╝██║    ██║██╔══██╗██╔══██╗████╗ ████║
-███████╗█████╗  ██╔██╗ ██║   ██║   ██║██╔██╗ ██║█████╗  ██║      ███████╗██║ █╗ ██║███████║██████╔╝██╔████╔██║
-╚════██║██╔══╝  ██║╚██╗██║   ██║   ██║██║╚██╗██║██╔══╝  ██║      ╚════██║██║███╗██║██╔══██║██╔══██╗██║╚██╔╝██║
-███████║███████╗██║ ╚████║   ██║   ██║██║ ╚████║███████╗███████╗  ███████║╚███╔███╔╝██║  ██║██║  ██║██║ ╚═╝ ██║
-╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝  ╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝
+ ___               _     _             ___ ___  
+|_ _|_ _  __ _(_) __| | ___ _ _| |_|_ _/ _ \ 
+ | || ' \/ _| | |/ _` |/ -_) ' \  _|| || (_) |
+|___|_||_\__|_|_|\__,_|\___|_||_\__|___\__\_\_/
 ```
 
 **Autonomous AI SOC for Startups**
@@ -35,11 +33,11 @@
 
 ---
 
-## 🧠 What is Sentinel Swarm?
+## 🧠 What is IncidentIQ?
 
 Most startups generate security alerts across five different systems — auth logs, GitHub, secrets vaults, CI/CD pipelines, network traffic. None of those alerts look critical in isolation. Together, they can be a coordinated attack.
 
-**Sentinel Swarm is the analyst that connects them.**
+**IncidentIQ is the analyst that connects them.**
 
 Instead of a human SOC team jumping between dashboards, five specialized AI agents each investigate one evidence domain. A Master Correlation Agent then synthesizes their findings into a single attack narrative, identifies the root cause, and hands off to a Remediation Agent that generates a specific, evidence-referenced response plan.
 
@@ -49,7 +47,7 @@ The data is mock. The analysis is real — every agent makes genuine OpenAI API 
 
 ## ⚡ The Demo
 
-Select the **Supply-Chain Attack** scenario and click **Run Swarm Investigation**:
+Select the **Supply-Chain Attack** scenario and click **Run Investigation**:
 
 ```
 03:05  AUTH     Login from Moscow — unknown device, MFA passed         [HIGH]
@@ -92,7 +90,7 @@ If the OpenAI API is unavailable or fails mid-investigation, `lib/fallbackInvest
 ## 🗂️ Project Structure
 
 ```
-sentinel-swarm/
+incidentiq/
 ├── app/
 │   ├── api/
 │   │   └── investigate/
@@ -307,7 +305,7 @@ Built at **Ralphthon 2026** — Singapore — Impact Track
 
 <div align="center">
 
-**Sentinel Swarm turns fragmented startup security alerts into a coordinated AI investigation —**  
+**IncidentIQ turns fragmented startup security alerts into a coordinated AI investigation —**  
 **giving small teams the visibility and response capability of a full security operations center.**
 
 <br/>
