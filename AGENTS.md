@@ -53,6 +53,24 @@ Do not hardcode the final investigation as purely static text unless used as a f
 
 The MVP should feel like real AI agents are investigating evidence.
 
+## Required Mock PR Result
+
+The product should also show a mock GitHub-style PR result for the suspicious code/dependency issue.
+
+This is not a real GitHub integration. Do not call GitHub APIs, create branches, open real pull requests, or require GitHub authentication.
+
+The PR result should feel like an AI-generated remediation proposal against the provided sample input code. If OpenAI can produce a valid solution, show the AI-generated PR-style output. If OpenAI is unavailable, fails, or returns unusable output, show a deterministic sample solution that the demo can rely on.
+
+The mock PR result should include:
+
+- PR title
+- PR summary
+- Files changed
+- Patch or code-diff style solution
+- Explanation of how the solution removes the malicious dependency risk
+- Test or validation notes
+- Clear label showing whether the result came from OpenAI or deterministic fallback
+
 ## Technical Constraints
 
 - Use Next.js
@@ -70,6 +88,7 @@ The MVP should feel like real AI agents are investigating evidence.
 - No user authentication
 - No billing
 - No production infrastructure
+- API Key has been provided in the global env file
 
 ## Required API Route
 
@@ -80,7 +99,8 @@ This route should:
 2. Run specialist agents via OpenAI
 3. Run Master Correlation Agent
 4. Run Remediation Agent
-5. Return structured JSON
+5. Generate or fall back to the mock PR result sample
+6. Return structured JSON
 
 ## Required Dashboard Behavior
 
@@ -128,6 +148,7 @@ Credential Theft → Secret Access → Malicious Dependency → Data Exfiltratio
 - Reset works
 - OpenAI path works when API key is set
 - Fallback works when API key is missing
+- Mock PR result appears with AI output when available or sample fallback when not
 - Risk score reaches 84%
 - All agents visibly complete
 - Final report appears
