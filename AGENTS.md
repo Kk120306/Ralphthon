@@ -36,12 +36,12 @@ Sentinel Swarm investigates this incident using multiple AI agents.
 
 ## Required Product Agents
 
-1. Intake Agent
-2. Auth Agent
-3. Code Agent
-4. Network Agent
-5. Master Correlation Agent
-6. Remediation Agent
+1. Intake Agent — First-responder triage analyst. Receives all 5 raw alerts, groups related signals, assigns initial severity, and decides whether specialist investigation is warranted. Key output: 5 alerts across auth, secrets, code, and network fired within 40 minutes — individually weak, collectively suspicious. Recommends escalation.
+2. Auth Agent — Identity and authentication specialist. Receives the suspicious login (Moscow, unknown device, MFA passed) and secrets access (PROD_PAYMENT_GATEWAY_KEY grabbed 6 minutes later). Flags the geography and device anomaly, notes MFA passing is insufficient clearance given the context, and assesses high likelihood of credential compromise.
+3. Code Agent — Repository and supply chain specialist. Receives the dependency addition (lodash-utilz, 19 minutes after login) and CI/CD trigger (deployed successfully). Identifies lodash-utilz as a typosquat of the legitimate lodash-utils, flags the innocuous commit message as a social engineering tactic, and confirms the malicious package is likely now active in production.
+4. Network Agent — Traffic analysis and exfiltration specialist. Receives the outbound transfer event (10.4GB to unapproved IP, 21 minutes after deployment). Flags volume at 26x the normal hourly baseline, unknown destination, and HTTPS protocol consistent with disguised exfiltration. Notes uncertainty — cannot confirm data contents, but timing and volume are highly anomalous.
+5. Master Correlation Agent — Senior incident commander. Receives all four specialist outputs and synthesizes them into a single attack narrative. Reconstructs the full 40-minute chain — credential theft → secrets access → dependency injection → data exfiltration. Identifies root cause as a compromised developer account. Assigns final severity (Critical) and confidence (84%).
+6. Remediation Agent — Incident response planner. Receives the Master Agent's output and generates a four-phase response: Containment (disable account, rotate keys, block IP, pause pipeline), Eradication (remove dependency, audit commits), Recovery (restore from last known-good deployment), and Post-Incident (package blocklist, CI checks, incident report).Sonnet 4.6Claude is AI and can make mistakes. Please double-check responses.
 
 These are the security investigation agents shown inside the product — not coding agents.
 
