@@ -1,0 +1,22 @@
+[
+  {
+    "order": 1,
+    "phase": "Credential Theft",
+    "approxTime": "2026-05-17T09:12:00+08:00"
+  },
+  {
+    "order": 2,
+    "phase": "Secret Access",
+    "approxTime": "2026-05-17T09:18:00+08:00"
+  },
+  {
+    "order": 3,
+    "phase": "Malicious Dependency",
+    "approxTime": "2026-05-17T09:31:00+08:00"
+  },
+  {
+    "order": 4,
+    "phase": "Data Exfiltration",
+    "approxTime": "2026-05-17T09:52:00+08:00"
+  }
+]

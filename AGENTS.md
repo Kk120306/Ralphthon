@@ -95,8 +95,8 @@ The mock PR result should include:
 POST /api/investigate
 
 This route should:
-1. Load mock incident data
-2. Run specialist agents via OpenAI
+1. Load raw logs from `data/incidents/supply-chain-attack/` via `lib/mockIncident.ts`
+2. Run specialist agents via OpenAI (each agent receives window-filtered log slices)
 3. Run Master Correlation Agent
 4. Run Remediation Agent
 5. Generate or fall back to the mock PR result sample

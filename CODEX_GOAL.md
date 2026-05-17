@@ -31,8 +31,9 @@ A Remediation Agent generates concrete response actions.
 - shadcn/ui components
 - lucide-react icons
 - OpenAI API called only from backend (app/api/investigate/route.ts)
-- Mock incident data in lib/mockIncident.ts
-- Fallback investigation in lib/fallbackInvestigation.ts
+- Raw mock logs in `data/incidents/supply-chain-attack/` (auth, secrets, github, cicd, network, threat intel, manifests)
+- Loader and per-agent slices in `lib/mockIncident.ts`
+- Fallback investigation in `lib/fallbackInvestigation.ts` (from `data/incidents/.../expected/`)
 - No database, no real auth, no real GitHub API calls
 
 ## Required API

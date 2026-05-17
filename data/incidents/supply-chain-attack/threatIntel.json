@@ -1,0 +1,569 @@
+{
+  "source": "acmefin_threat_intel_aggregator",
+  "exportedAt": "2026-05-17T12:00:00+08:00",
+  "feeds": [
+    "mock-ti-commercial",
+    "oss-malware-packages",
+    "community-egress-blocklist",
+    "npm-reputation"
+  ],
+  "indicatorCount": 52,
+  "indicators": [
+    {
+      "type": "ipv4",
+      "value": "52.219.61.60",
+      "confidence": 6,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.54.182.83",
+      "confidence": 5,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.7.205.168",
+      "confidence": 10,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.6.199.55",
+      "confidence": 14,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.112.33.169",
+      "confidence": 8,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.188.22.18",
+      "confidence": 6,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.210.154.197",
+      "confidence": 15,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.52.87.65",
+      "confidence": 3,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.166.198.174",
+      "confidence": 4,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.170.89.163",
+      "confidence": 10,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.246.34.86",
+      "confidence": 0,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.229.195.131",
+      "confidence": 7,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.6.119.6",
+      "confidence": 3,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.158.121.189",
+      "confidence": 13,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.124.40.16",
+      "confidence": 4,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.191.255.76",
+      "confidence": 6,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.77.192.53",
+      "confidence": 1,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.121.227.190",
+      "confidence": 10,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.68.142.82",
+      "confidence": 1,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.212.147.193",
+      "confidence": 0,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.117.169.88",
+      "confidence": 7,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.105.27.233",
+      "confidence": 7,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.113.195.134",
+      "confidence": 10,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.93.226.162",
+      "confidence": 0,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.33.251.18",
+      "confidence": 6,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.26.72.241",
+      "confidence": 6,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.64.46.45",
+      "confidence": 6,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.120.40.110",
+      "confidence": 14,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.159.84.185",
+      "confidence": 6,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.125.217.46",
+      "confidence": 7,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.155.146.148",
+      "confidence": 14,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.103.139.221",
+      "confidence": 15,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.40.184.102",
+      "confidence": 12,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.85.241.113",
+      "confidence": 13,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.221.79.210",
+      "confidence": 15,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.10.195.110",
+      "confidence": 2,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.153.78.142",
+      "confidence": 5,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.131.194.119",
+      "confidence": 9,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.232.145.97",
+      "confidence": 15,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "ipv4",
+      "value": "52.36.170.35",
+      "confidence": 15,
+      "tags": [
+        "aws",
+        "cdn",
+        "benign"
+      ],
+      "lastSeen": "2026-05-01"
+    },
+    {
+      "type": "npm_package",
+      "value": "axios",
+      "confidence": 3,
+      "tags": [
+        "popular_oss"
+      ],
+      "weeklyDownloads": 11383382
+    },
+    {
+      "type": "npm_package",
+      "value": "express",
+      "confidence": 3,
+      "tags": [
+        "popular_oss"
+      ],
+      "weeklyDownloads": 1280552
+    },
+    {
+      "type": "npm_package",
+      "value": "react",
+      "confidence": 0,
+      "tags": [
+        "popular_oss"
+      ],
+      "weeklyDownloads": 34601395
+    },
+    {
+      "type": "npm_package",
+      "value": "typescript",
+      "confidence": 5,
+      "tags": [
+        "popular_oss"
+      ],
+      "weeklyDownloads": 33980900
+    },
+    {
+      "type": "npm_package",
+      "value": "lodash",
+      "confidence": 6,
+      "tags": [
+        "popular_oss"
+      ],
+      "weeklyDownloads": 28905218
+    },
+    {
+      "type": "npm_package",
+      "value": "moment",
+      "confidence": 6,
+      "tags": [
+        "popular_oss"
+      ],
+      "weeklyDownloads": 26041330
+    },
+    {
+      "type": "npm_package",
+      "value": "request",
+      "confidence": 6,
+      "tags": [
+        "popular_oss"
+      ],
+      "weeklyDownloads": 33853219
+    },
+    {
+      "type": "ipv4",
+      "value": "185.199.108.153",
+      "confidence": 72,
+      "tags": [
+        "residential_proxy",
+        "credential_access"
+      ],
+      "lastSeen": "2026-05-10"
+    },
+    {
+      "type": "ipv4",
+      "value": "45.77.88.21",
+      "confidence": 91,
+      "tags": [
+        "exfiltration",
+        "bulletproof_hosting"
+      ],
+      "lastSeen": "2026-05-16",
+      "relatedMalware": [
+        "FIN-EXFIL-BUCKET-17"
+      ]
+    },
+    {
+      "type": "domain",
+      "value": "cdn-utilz-fast.io",
+      "confidence": 88,
+      "tags": [
+        "c2"
+      ],
+      "lastSeen": "2026-05-14"
+    },
+    {
+      "type": "npm_package",
+      "value": "lodash-utilz",
+      "confidence": 94,
+      "tags": [
+        "typosquat",
+        "supply_chain"
+      ],
+      "legitimatePackage": "lodash-utils",
+      "firstPublished": "2026-04-30",
+      "weeklyDownloads": 127
+    },
+    {
+      "type": "npm_package",
+      "value": "lodash-utils",
+      "confidence": 3,
+      "tags": [
+        "popular_oss"
+      ],
+      "weeklyDownloads": 890000
+    }
+  ]
+}

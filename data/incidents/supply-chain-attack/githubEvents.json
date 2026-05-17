@@ -1,0 +1,4345 @@
+{
+  "source": "github_audit_log",
+  "exportedAt": "2026-05-17T12:00:00+08:00",
+  "repository": "acmefin/payments-api",
+  "recordCount": 147,
+  "events": [
+    {
+      "id": "gh-00004",
+      "timestamp": "2026-04-26T09:00:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "bbf02626c8e3",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00001",
+      "timestamp": "2026-04-26T10:42:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "9532fc551d38",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 2
+      }
+    },
+    {
+      "id": "gh-00002",
+      "timestamp": "2026-04-26T10:50:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "2b34198f6bd3",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00006",
+      "timestamp": "2026-04-26T13:29:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "1cd20e298d13",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00003",
+      "timestamp": "2026-04-26T15:18:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "390e3e1a167e",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00005",
+      "timestamp": "2026-04-26T17:04:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "c93b77c93c4b",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "src/billing/invoice.ts"
+            ],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00012",
+      "timestamp": "2026-04-27T09:55:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "bf390af1446b",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00007",
+      "timestamp": "2026-04-27T10:06:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "e9eb40d219a8",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00009",
+      "timestamp": "2026-04-27T11:07:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "76995a7676cc",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00010",
+      "timestamp": "2026-04-27T11:07:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "31ec47c23830",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "README.md"
+            ],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00008",
+      "timestamp": "2026-04-27T14:57:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "800e0eaf2ebe",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 2
+      }
+    },
+    {
+      "id": "gh-00011",
+      "timestamp": "2026-04-27T18:30:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "dd6139a1a646",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00013",
+      "timestamp": "2026-04-28T09:04:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "52f90fb7ac59",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00016",
+      "timestamp": "2026-04-28T11:04:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "d05db78ddca4",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00015",
+      "timestamp": "2026-04-28T15:09:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "e6cadee3916d",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00014",
+      "timestamp": "2026-04-28T17:44:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "c35939ae44e9",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00020",
+      "timestamp": "2026-04-29T14:52:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "1de4fae10bf4",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00017",
+      "timestamp": "2026-04-29T15:25:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "e12dae4c28f5",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00018",
+      "timestamp": "2026-04-29T16:20:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "2e63928f53dc",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00019",
+      "timestamp": "2026-04-29T17:00:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "e36ec12744ee",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "tests/auth.test.ts"
+            ],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00023",
+      "timestamp": "2026-04-30T11:31:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "33f47ae26404",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00021",
+      "timestamp": "2026-04-30T14:45:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "83d92a2d30a2",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "src/payments/client.ts"
+            ],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00022",
+      "timestamp": "2026-04-30T14:53:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "b2379edcc714",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00024",
+      "timestamp": "2026-04-30T15:13:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "8500f7e315fa",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "src/billing/invoice.ts"
+            ],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 2
+      }
+    },
+    {
+      "id": "gh-00026",
+      "timestamp": "2026-04-30T17:47:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "1c6f309da03d",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "src/billing/invoice.ts"
+            ],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00025",
+      "timestamp": "2026-04-30T18:07:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "d5ab4ef44a03",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00027",
+      "timestamp": "2026-04-30T18:11:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "cb01b2e0b3d7",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00028",
+      "timestamp": "2026-04-30T18:58:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "c148b2d32afc",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00033",
+      "timestamp": "2026-05-01T11:03:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "bb95c71e7da6",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00029",
+      "timestamp": "2026-05-01T11:26:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "aa3f0ac33422",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00030",
+      "timestamp": "2026-05-01T12:39:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "c6e1e75a636a",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00034",
+      "timestamp": "2026-05-01T13:09:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "e6e1ba1fe162",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 1
+      }
+    },
+    {
+      "id": "gh-00032",
+      "timestamp": "2026-05-01T17:18:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "f0a259e8e8b9",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "src/payments/client.ts"
+            ],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 2
+      }
+    },
+    {
+      "id": "gh-00031",
+      "timestamp": "2026-05-01T17:44:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "b30a66628796",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "tests/auth.test.ts"
+            ],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00039",
+      "timestamp": "2026-05-02T09:27:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "5773e69e7d3f",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00038",
+      "timestamp": "2026-05-02T12:18:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "82e5883d6bc8",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00037",
+      "timestamp": "2026-05-02T13:12:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "aedd21ee6cf3",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "src/billing/invoice.ts"
+            ],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00036",
+      "timestamp": "2026-05-02T13:44:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "ba1c401c06df",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00040",
+      "timestamp": "2026-05-02T16:45:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "ffffa237a158",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00035",
+      "timestamp": "2026-05-02T18:55:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "bcef45cd4f61",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "src/billing/invoice.ts"
+            ],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00047",
+      "timestamp": "2026-05-03T09:18:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "f5f5c8b6ca8d",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 2
+      }
+    },
+    {
+      "id": "gh-00044",
+      "timestamp": "2026-05-03T13:13:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "d0ae0bae47a3",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 1
+      }
+    },
+    {
+      "id": "gh-00045",
+      "timestamp": "2026-05-03T14:28:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "4d8770f78d14",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "src/payments/client.ts"
+            ],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00042",
+      "timestamp": "2026-05-03T14:33:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "484f6e3f120b",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "src/payments/client.ts"
+            ],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00046",
+      "timestamp": "2026-05-03T15:16:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "9a4cfec95677",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00043",
+      "timestamp": "2026-05-03T17:25:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "2789be697278",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "tests/auth.test.ts"
+            ],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00048",
+      "timestamp": "2026-05-03T17:34:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "11e06ab07eaf",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00041",
+      "timestamp": "2026-05-03T18:53:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "b971a35d187b",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "src/payments/client.ts"
+            ],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00053",
+      "timestamp": "2026-05-04T10:22:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "fd948990b9ec",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00051",
+      "timestamp": "2026-05-04T10:36:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "e255a44a46fb",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00056",
+      "timestamp": "2026-05-04T14:00:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "9db3c2eff0b9",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 1
+      }
+    },
+    {
+      "id": "gh-00052",
+      "timestamp": "2026-05-04T14:01:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "73b664bc5d4e",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 2
+      }
+    },
+    {
+      "id": "gh-00055",
+      "timestamp": "2026-05-04T15:50:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "dc27f3e976b2",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "src/payments/client.ts"
+            ],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00049",
+      "timestamp": "2026-05-04T15:53:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "2a9af244a0dc",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 2
+      }
+    },
+    {
+      "id": "gh-00054",
+      "timestamp": "2026-05-04T16:24:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "752624e2769c",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00050",
+      "timestamp": "2026-05-04T16:45:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "64eb4c19b2ea",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00057",
+      "timestamp": "2026-05-04T17:05:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "5e003d45c606",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00059",
+      "timestamp": "2026-05-05T16:41:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "9cb6d122b99a",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00061",
+      "timestamp": "2026-05-05T18:04:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "f66e2c41891f",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00062",
+      "timestamp": "2026-05-05T18:09:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "a0c804a11ddc",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [
+              "src/payments/client.ts"
+            ],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00060",
+      "timestamp": "2026-05-05T18:31:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "64b2a56b6d6b",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00058",
+      "timestamp": "2026-05-05T18:53:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "50b3af41bf5c",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00065",
+      "timestamp": "2026-05-06T10:11:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "b542deab4bf3",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "tests/auth.test.ts"
+            ],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00066",
+      "timestamp": "2026-05-06T10:46:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "234d69f46101",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 1
+      }
+    },
+    {
+      "id": "gh-00063",
+      "timestamp": "2026-05-06T12:50:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "48b5e8c652ae",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00067",
+      "timestamp": "2026-05-06T12:58:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "19624e9d3543",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00064",
+      "timestamp": "2026-05-06T14:56:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "8ade43867d3b",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00076",
+      "timestamp": "2026-05-07T11:28:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "3a65244ae0ac",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00070",
+      "timestamp": "2026-05-07T11:36:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "a0d917b8cf4f",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00072",
+      "timestamp": "2026-05-07T12:33:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "f860bcda9d27",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00071",
+      "timestamp": "2026-05-07T12:48:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "8cd61d4b53f6",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00073",
+      "timestamp": "2026-05-07T14:06:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "c4280f9578b1",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "src/billing/invoice.ts"
+            ],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00068",
+      "timestamp": "2026-05-07T15:14:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "f43540d5ab48",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 2
+      }
+    },
+    {
+      "id": "gh-00075",
+      "timestamp": "2026-05-07T15:22:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "e1366dee22dc",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00074",
+      "timestamp": "2026-05-07T15:23:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "a6721eb74110",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00069",
+      "timestamp": "2026-05-07T17:00:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "b9a54c4d274a",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00078",
+      "timestamp": "2026-05-08T10:30:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "bcdbd58a9398",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00080",
+      "timestamp": "2026-05-08T11:16:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "fc257a3e16f0",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 1
+      }
+    },
+    {
+      "id": "gh-00077",
+      "timestamp": "2026-05-08T11:23:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "aa1e00c7a126",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00079",
+      "timestamp": "2026-05-08T12:02:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "30bd14a2d003",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 1
+      }
+    },
+    {
+      "id": "gh-00081",
+      "timestamp": "2026-05-08T12:28:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "ab454788ae8d",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00089",
+      "timestamp": "2026-05-09T09:36:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "95c5392e2a03",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00088",
+      "timestamp": "2026-05-09T10:18:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "a929aff073c1",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00082",
+      "timestamp": "2026-05-09T11:39:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "b8debd92c41c",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00087",
+      "timestamp": "2026-05-09T15:22:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "a6cbdaddfba4",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00086",
+      "timestamp": "2026-05-09T15:33:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "7bb1f26ed10e",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00084",
+      "timestamp": "2026-05-09T17:43:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "7b77afe3966f",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00085",
+      "timestamp": "2026-05-09T18:02:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "f0b465d8ab96",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00083",
+      "timestamp": "2026-05-09T18:04:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "4ad51370d275",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 1
+      }
+    },
+    {
+      "id": "gh-00093",
+      "timestamp": "2026-05-10T10:47:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "4ad24a82540a",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00091",
+      "timestamp": "2026-05-10T13:43:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "75bf8ed145d6",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00096",
+      "timestamp": "2026-05-10T14:05:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "abe95019aa55",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00090",
+      "timestamp": "2026-05-10T14:06:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "379f917d1307",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00095",
+      "timestamp": "2026-05-10T16:59:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "a9a9af7f74e5",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 2
+      }
+    },
+    {
+      "id": "gh-00098",
+      "timestamp": "2026-05-10T17:18:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "41dae8189a9f",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00092",
+      "timestamp": "2026-05-10T17:35:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "8bd7b450f792",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00097",
+      "timestamp": "2026-05-10T18:03:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "d60b34e1fa82",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00094",
+      "timestamp": "2026-05-10T18:44:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "bf3f9dc4f02f",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 1
+      }
+    },
+    {
+      "id": "gh-00105",
+      "timestamp": "2026-05-11T09:30:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "2dc3c2520079",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00107",
+      "timestamp": "2026-05-11T10:25:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "bc7777cfb094",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00103",
+      "timestamp": "2026-05-11T10:32:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "5b5416670801",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "tests/auth.test.ts"
+            ],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00102",
+      "timestamp": "2026-05-11T12:29:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "fe01b97769b0",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00099",
+      "timestamp": "2026-05-11T12:41:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "1012d3384e4c",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00101",
+      "timestamp": "2026-05-11T13:46:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "e46b779f2216",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00106",
+      "timestamp": "2026-05-11T15:22:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "94399e99207b",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00100",
+      "timestamp": "2026-05-11T15:25:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "a6095943478a",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [
+              "src/payments/client.ts"
+            ],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 2
+      }
+    },
+    {
+      "id": "gh-00104",
+      "timestamp": "2026-05-11T16:24:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "a02bd18bcf2b",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [
+              "src/payments/client.ts"
+            ],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00111",
+      "timestamp": "2026-05-12T09:54:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "8b777e6f06bc",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00109",
+      "timestamp": "2026-05-12T12:15:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "cc45144df76a",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00108",
+      "timestamp": "2026-05-12T12:57:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "a2ded454e226",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00110",
+      "timestamp": "2026-05-12T14:09:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "d768832b4ffd",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "tests/auth.test.ts"
+            ],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00113",
+      "timestamp": "2026-05-12T17:02:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "90a23768e7ed",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "README.md"
+            ],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00112",
+      "timestamp": "2026-05-12T17:17:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "75db6e48db12",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 1
+      }
+    },
+    {
+      "id": "gh-00114",
+      "timestamp": "2026-05-12T17:29:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "60ce85c0701a",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00119",
+      "timestamp": "2026-05-13T11:30:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "de4048127e78",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00120",
+      "timestamp": "2026-05-13T13:16:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "9fe84eebc6c9",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00121",
+      "timestamp": "2026-05-13T13:30:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "e6c6d9b13ea6",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00118",
+      "timestamp": "2026-05-13T13:51:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "4c5dba9e2ac3",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "src/payments/client.ts"
+            ],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00115",
+      "timestamp": "2026-05-13T14:39:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "eca1ad527bbf",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00117",
+      "timestamp": "2026-05-13T15:17:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "8362f93e0d38",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00116",
+      "timestamp": "2026-05-13T18:21:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "6dad343f14f7",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00129",
+      "timestamp": "2026-05-14T10:06:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "2054b2ffd1b5",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 1
+      }
+    },
+    {
+      "id": "gh-00130",
+      "timestamp": "2026-05-14T10:06:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "533012ae3bf1",
+            "message": "test: increase coverage on auth middleware",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "tests/auth.test.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00126",
+      "timestamp": "2026-05-14T11:21:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "4a6c7d60405c",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00125",
+      "timestamp": "2026-05-14T11:55:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "3ae63ab3fd17",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00128",
+      "timestamp": "2026-05-14T12:42:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "506bf0ce6e9d",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 4
+      }
+    },
+    {
+      "id": "gh-00122",
+      "timestamp": "2026-05-14T14:23:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/fix/invoice-rounding",
+        "commits": [
+          {
+            "sha": "9f73199eb7c3",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00127",
+      "timestamp": "2026-05-14T16:49:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "ece0e26cf85e",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00124",
+      "timestamp": "2026-05-14T17:31:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "d655a5cc8cfa",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00123",
+      "timestamp": "2026-05-14T18:12:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "a3acb0a36dd1",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00135",
+      "timestamp": "2026-05-15T11:19:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "12b3c910060d",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00131",
+      "timestamp": "2026-05-15T13:28:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "b06109305c84",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00132",
+      "timestamp": "2026-05-15T14:55:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "fa4f4a634064",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00134",
+      "timestamp": "2026-05-15T16:34:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "4a2516de0154",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 6
+      }
+    },
+    {
+      "id": "gh-00136",
+      "timestamp": "2026-05-15T16:48:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "8a21115cb346",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "src/payments/client.ts"
+            ],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00133",
+      "timestamp": "2026-05-15T17:11:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "a740b2a8fb47",
+            "message": "chore: bump axios to 1.7.2",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00141",
+      "timestamp": "2026-05-16T09:09:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "1cb4af98f3d7",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 2
+      }
+    },
+    {
+      "id": "gh-00140",
+      "timestamp": "2026-05-16T10:40:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "84915cae2383",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00144",
+      "timestamp": "2026-05-16T10:53:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "d02553356603",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 7
+      }
+    },
+    {
+      "id": "gh-00142",
+      "timestamp": "2026-05-16T11:45:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "803c12ca23b0",
+            "message": "feat: add webhook retry queue",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [
+              "package.json"
+            ],
+            "modified": [
+              "src/webhooks/retry.ts",
+              "package.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00138",
+      "timestamp": "2026-05-16T12:16:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "2447167c17e1",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "dependabot@noreply.github.com"
+            },
+            "added": [],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 5
+      }
+    },
+    {
+      "id": "gh-00143",
+      "timestamp": "2026-05-16T12:21:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "7b950c5fc37d",
+            "message": "docs: update API rate limits",
+            "author": {
+              "email": "alex.chen@acmefin.dev"
+            },
+            "added": [
+              "README.md"
+            ],
+            "modified": [
+              "README.md"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 8
+      }
+    },
+    {
+      "id": "gh-00137",
+      "timestamp": "2026-05-16T17:23:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/chore/deps",
+        "commits": [
+          {
+            "sha": "404630796785",
+            "message": "fix: invoice rounding edge case",
+            "author": {
+              "email": "priya.sharma@acmefin.dev"
+            },
+            "added": [],
+            "modified": [
+              "src/billing/invoice.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-00139",
+      "timestamp": "2026-05-16T17:51:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "marcus-acme",
+        "email": "marcus.lee@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/feat/webhook-retry",
+        "commits": [
+          {
+            "sha": "54d18579b411",
+            "message": "refactor: extract payment client",
+            "author": {
+              "email": "marcus.lee@acmefin.dev"
+            },
+            "added": [
+              "src/payments/client.ts"
+            ],
+            "modified": [
+              "src/payments/client.ts"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 3
+      }
+    },
+    {
+      "id": "gh-noise-002",
+      "timestamp": "2026-05-17T08:55:00+08:00",
+      "type": "PullRequestEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "priya-acme",
+        "email": "priya.sharma@acmefin.dev"
+      },
+      "payload": {
+        "action": "opened",
+        "number": 1842,
+        "title": "fix: settlement report timezone",
+        "base": "main"
+      }
+    },
+    {
+      "id": "gh-noise-001",
+      "timestamp": "2026-05-17T09:28:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "dependabot[bot]",
+        "email": "dependabot@noreply.github.com"
+      },
+      "payload": {
+        "ref": "refs/heads/dependabot/npm_and_yarn/express-4.21.0",
+        "commits": [
+          {
+            "sha": "b8e21a0c1f2d",
+            "message": "chore(deps): bump express from 4.20.2 to 4.21.0",
+            "modified": [
+              "package.json"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gh-48291",
+      "timestamp": "2026-05-17T09:31:00+08:00",
+      "type": "PushEvent",
+      "repo": "acmefin/payments-api",
+      "actor": {
+        "login": "alexchen-acme",
+        "email": "alex.chen@acmefin.dev"
+      },
+      "payload": {
+        "ref": "refs/heads/main",
+        "commits": [
+          {
+            "sha": "a4f91c2e8b3d",
+            "message": "minor utility cleanup",
+            "author": {
+              "email": "alex.chen@acmefin.dev",
+              "name": "Alex Chen"
+            },
+            "added": [],
+            "modified": [
+              "package.json",
+              "package-lock.json"
+            ],
+            "removed": []
+          }
+        ],
+        "size": 2
+      }
+    }
+  ]
+}

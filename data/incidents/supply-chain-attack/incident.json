@@ -1,0 +1,36 @@
+{
+  "id": "INC-2026-0517-ACME-001",
+  "scenarioId": "supply-chain-attack",
+  "organization": {
+    "name": "AcmeFin",
+    "domain": "acmefin.dev",
+    "industry": "Fintech",
+    "size": "startup"
+  },
+  "investigationWindow": {
+    "from": "2026-05-17T08:00:00+08:00",
+    "to": "2026-05-17T11:00:00+08:00",
+    "timezone": "Asia/Singapore"
+  },
+  "dataSources": [
+    "authEvents.json",
+    "secretsEvents.json",
+    "githubEvents.json",
+    "cicdEvents.json",
+    "networkEvents.json",
+    "threatIntel.json",
+    "packageManifests.json"
+  ],
+  "validationOnly": [
+    "expected/mitreMapping.json",
+    "expected/attackChain.json",
+    "expected/outcome.json"
+  ],
+  "repositories": [
+    "acmefin/payments-api"
+  ],
+  "productionHosts": [
+    "api-prod-01"
+  ],
+  "_instructions": "Agents must analyze raw logs below. Findings are not pre-labeled in source files."
+}

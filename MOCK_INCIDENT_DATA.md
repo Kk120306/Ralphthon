@@ -100,6 +100,32 @@ Critical
 - T1195 — Supply Chain Compromise
 - T1041 — Exfiltration Over C2 Channel
 
+## Machine-Readable Data
+
+Raw log exports for agent investigation (no pre-labeled alerts or summaries):
+
+**Directory:** `data/incidents/supply-chain-attack/`
+
+| File | Agent input? | Description |
+|------|----------------|-------------|
+| `incident.json` | Yes | Org metadata and investigation time window only |
+| `authEvents.json` | Yes | Okta-style authentication logs (~300+ events) |
+| `secretsEvents.json` | Yes | Vault audit logs |
+| `githubEvents.json` | Yes | Push/PR audit events |
+| `cicdEvents.json` | Yes | GitHub Actions workflow runs |
+| `networkEvents.json` | Yes | VPC flow logs (high volume + baseline stats) |
+| `threatIntel.json` | Yes | IOC feed (mostly benign; relevant IOCs embedded) |
+| `packageManifests.json` | Yes | `package.json` snapshots before/after suspicious commit |
+| `expected/mitreMapping.json` | **No** | Ground truth for fallback/demo validation |
+| `expected/attackChain.json` | **No** | Expected attack phases |
+| `expected/outcome.json` | **No** | Expected root cause, severity, remediation |
+
+Regenerate all files: `python3 scripts/generate-mock-incident-data.py`
+
+**Runtime loading:** `lib/mockIncident.ts` reads these JSON files; `lib/runInvestigation.ts` passes window-filtered slices to each agent via `POST /api/investigate`. Ground truth for fallback lives only in `expected/`.
+
+Agents must discover anomalies in raw logs (e.g. Moscow login, dormant prod secret read, `lodash-utilz`, 10.4GB egress to `45.77.88.21`). Small red herrings are included (failed intern vault access, flaky CI, approved CDN upload).
+
 ## Expected Remediation Actions
 
 - Disable compromised developer account

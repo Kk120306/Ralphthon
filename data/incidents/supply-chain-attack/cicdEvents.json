@@ -1,0 +1,1553 @@
+{
+  "source": "github_actions_workflow_runs",
+  "exportedAt": "2026-05-17T12:00:00+08:00",
+  "recordCount": 85,
+  "events": [
+    {
+      "id": "gha-00001",
+      "timestamp": "2026-05-03T09:34:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000001",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "main",
+      "commitSha": "800a6ac35e1d",
+      "conclusion": "success",
+      "durationSeconds": 51,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00002",
+      "timestamp": "2026-05-03T10:49:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000002",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "feat/webhook-retry",
+      "commitSha": "e2cbc67e8c0a",
+      "conclusion": "success",
+      "durationSeconds": 62,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00003",
+      "timestamp": "2026-05-03T13:29:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18000000003",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "6ab995f21630",
+      "conclusion": "success",
+      "durationSeconds": 244,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00006",
+      "timestamp": "2026-05-03T14:40:00+08:00",
+      "platform": "github_actions",
+      "workflow": "nightly-security-scan",
+      "runId": "18000000006",
+      "repository": "acmefin/payments-api",
+      "trigger": "schedule",
+      "branch": "main",
+      "commitSha": "55b0418d5cfc",
+      "conclusion": "success",
+      "durationSeconds": 344,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00004",
+      "timestamp": "2026-05-03T16:59:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-staging",
+      "runId": "18000000004",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "1599643e8955",
+      "conclusion": "success",
+      "durationSeconds": 174,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00005",
+      "timestamp": "2026-05-03T22:40:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18000000005",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "feat/webhook-retry",
+      "commitSha": "1aab366f81f0",
+      "conclusion": "success",
+      "durationSeconds": 102,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00007",
+      "timestamp": "2026-05-04T10:25:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000007",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "main",
+      "commitSha": "158027f356ad",
+      "conclusion": "success",
+      "durationSeconds": 397,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00008",
+      "timestamp": "2026-05-04T11:23:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000008",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "main",
+      "commitSha": "50bddafff569",
+      "conclusion": "success",
+      "durationSeconds": 91,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00010",
+      "timestamp": "2026-05-04T11:44:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-staging",
+      "runId": "18000000010",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "406c74f9c68a",
+      "conclusion": "success",
+      "durationSeconds": 164,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00011",
+      "timestamp": "2026-05-04T17:35:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18000000011",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "feat/webhook-retry",
+      "commitSha": "e09fc362cc59",
+      "conclusion": "success",
+      "durationSeconds": 55,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00009",
+      "timestamp": "2026-05-04T17:59:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18000000009",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "1ebf2e1e9ad8",
+      "conclusion": "failure",
+      "durationSeconds": 227,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "failure",
+        "build": "skipped"
+      }
+    },
+    {
+      "id": "gha-00015",
+      "timestamp": "2026-05-05T12:04:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-staging",
+      "runId": "18000000015",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "feat/webhook-retry",
+      "commitSha": "97626886d5b7",
+      "conclusion": "success",
+      "durationSeconds": 322,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00014",
+      "timestamp": "2026-05-05T12:34:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18000000014",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "efd16e8cf753",
+      "conclusion": "success",
+      "durationSeconds": 351,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00016",
+      "timestamp": "2026-05-05T18:29:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18000000016",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "c211ff5efe59",
+      "conclusion": "success",
+      "durationSeconds": 54,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00017",
+      "timestamp": "2026-05-05T18:49:00+08:00",
+      "platform": "github_actions",
+      "workflow": "nightly-security-scan",
+      "runId": "18000000017",
+      "repository": "acmefin/payments-api",
+      "trigger": "schedule",
+      "branch": "feat/webhook-retry",
+      "commitSha": "206e54c66533",
+      "conclusion": "success",
+      "durationSeconds": 142,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00012",
+      "timestamp": "2026-05-05T19:22:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000012",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "feat/webhook-retry",
+      "commitSha": "1437d7f87985",
+      "conclusion": "success",
+      "durationSeconds": 406,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00013",
+      "timestamp": "2026-05-05T21:35:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000013",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "faed56612a4c",
+      "conclusion": "success",
+      "durationSeconds": 335,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00021",
+      "timestamp": "2026-05-06T08:36:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-staging",
+      "runId": "18000000021",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "feat/webhook-retry",
+      "commitSha": "fad56f830a60",
+      "conclusion": "success",
+      "durationSeconds": 70,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00020",
+      "timestamp": "2026-05-06T12:55:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18000000020",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "f88274621b93",
+      "conclusion": "success",
+      "durationSeconds": 95,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00019",
+      "timestamp": "2026-05-06T17:07:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000019",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "2223dc1669f9",
+      "conclusion": "success",
+      "durationSeconds": 111,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00022",
+      "timestamp": "2026-05-06T18:14:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18000000022",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "06b3386adfb8",
+      "conclusion": "success",
+      "durationSeconds": 380,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00018",
+      "timestamp": "2026-05-06T22:49:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000018",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "90f64ba52bd5",
+      "conclusion": "success",
+      "durationSeconds": 254,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00025",
+      "timestamp": "2026-05-07T08:46:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18000000025",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "feat/webhook-retry",
+      "commitSha": "27e7256e8a73",
+      "conclusion": "success",
+      "durationSeconds": 310,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00026",
+      "timestamp": "2026-05-07T10:06:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-staging",
+      "runId": "18000000026",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "c54a1d6100f4",
+      "conclusion": "success",
+      "durationSeconds": 143,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00027",
+      "timestamp": "2026-05-07T14:36:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18000000027",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "d493133605f4",
+      "conclusion": "success",
+      "durationSeconds": 371,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00028",
+      "timestamp": "2026-05-07T18:43:00+08:00",
+      "platform": "github_actions",
+      "workflow": "nightly-security-scan",
+      "runId": "18000000028",
+      "repository": "acmefin/payments-api",
+      "trigger": "schedule",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "daa992354ce8",
+      "conclusion": "success",
+      "durationSeconds": 130,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00024",
+      "timestamp": "2026-05-07T20:52:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000024",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "1dd9808818fc",
+      "conclusion": "success",
+      "durationSeconds": 315,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00023",
+      "timestamp": "2026-05-07T22:59:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000023",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "main",
+      "commitSha": "efa5721f1418",
+      "conclusion": "success",
+      "durationSeconds": 229,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00033",
+      "timestamp": "2026-05-08T08:18:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18000000033",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "4529f49a8afd",
+      "conclusion": "success",
+      "durationSeconds": 48,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00029",
+      "timestamp": "2026-05-08T12:35:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000029",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "feat/webhook-retry",
+      "commitSha": "50fc81e2d27d",
+      "conclusion": "success",
+      "durationSeconds": 225,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00032",
+      "timestamp": "2026-05-08T15:23:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-staging",
+      "runId": "18000000032",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "feat/webhook-retry",
+      "commitSha": "cb4f740019a4",
+      "conclusion": "failure",
+      "durationSeconds": 416,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "failure",
+        "build": "skipped"
+      }
+    },
+    {
+      "id": "gha-00030",
+      "timestamp": "2026-05-08T17:35:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000030",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "feat/webhook-retry",
+      "commitSha": "be5205d31ea8",
+      "conclusion": "failure",
+      "durationSeconds": 369,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "failure",
+        "build": "skipped"
+      }
+    },
+    {
+      "id": "gha-00031",
+      "timestamp": "2026-05-08T20:52:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18000000031",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "7b3ffc6d87fd",
+      "conclusion": "success",
+      "durationSeconds": 237,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00035",
+      "timestamp": "2026-05-09T11:06:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000035",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "feat/webhook-retry",
+      "commitSha": "4fed4546dd70",
+      "conclusion": "success",
+      "durationSeconds": 180,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00038",
+      "timestamp": "2026-05-09T12:31:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18000000038",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "30d38e99cd25",
+      "conclusion": "success",
+      "durationSeconds": 64,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00034",
+      "timestamp": "2026-05-09T16:14:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000034",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "feat/webhook-retry",
+      "commitSha": "0b1c718d4a40",
+      "conclusion": "success",
+      "durationSeconds": 328,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00036",
+      "timestamp": "2026-05-09T18:56:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18000000036",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "83326499c13d",
+      "conclusion": "success",
+      "durationSeconds": 92,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00039",
+      "timestamp": "2026-05-09T19:05:00+08:00",
+      "platform": "github_actions",
+      "workflow": "nightly-security-scan",
+      "runId": "18000000039",
+      "repository": "acmefin/payments-api",
+      "trigger": "schedule",
+      "branch": "feat/webhook-retry",
+      "commitSha": "b223e8de5d25",
+      "conclusion": "success",
+      "durationSeconds": 258,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00037",
+      "timestamp": "2026-05-09T19:36:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-staging",
+      "runId": "18000000037",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "2786f6a63e09",
+      "conclusion": "success",
+      "durationSeconds": 292,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00043",
+      "timestamp": "2026-05-10T09:14:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-staging",
+      "runId": "18000000043",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "feat/webhook-retry",
+      "commitSha": "4bc84843ae48",
+      "conclusion": "success",
+      "durationSeconds": 217,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00044",
+      "timestamp": "2026-05-10T09:30:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18000000044",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "cc62cd866dff",
+      "conclusion": "success",
+      "durationSeconds": 88,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00040",
+      "timestamp": "2026-05-10T10:55:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000040",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "05dabac3d554",
+      "conclusion": "success",
+      "durationSeconds": 72,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00042",
+      "timestamp": "2026-05-10T14:09:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18000000042",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "c927ebe427cf",
+      "conclusion": "success",
+      "durationSeconds": 349,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00041",
+      "timestamp": "2026-05-10T16:33:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000041",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "4c95c0a75679",
+      "conclusion": "success",
+      "durationSeconds": 302,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00049",
+      "timestamp": "2026-05-11T07:49:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18000000049",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "feat/webhook-retry",
+      "commitSha": "e2695c4aa8b8",
+      "conclusion": "success",
+      "durationSeconds": 270,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00050",
+      "timestamp": "2026-05-11T08:59:00+08:00",
+      "platform": "github_actions",
+      "workflow": "nightly-security-scan",
+      "runId": "18000000050",
+      "repository": "acmefin/payments-api",
+      "trigger": "schedule",
+      "branch": "main",
+      "commitSha": "bf65704fde14",
+      "conclusion": "success",
+      "durationSeconds": 417,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00047",
+      "timestamp": "2026-05-11T09:17:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18000000047",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "feat/webhook-retry",
+      "commitSha": "2ddf59399d83",
+      "conclusion": "success",
+      "durationSeconds": 388,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00046",
+      "timestamp": "2026-05-11T13:31:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000046",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "6467207e13ef",
+      "conclusion": "success",
+      "durationSeconds": 169,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00045",
+      "timestamp": "2026-05-11T19:32:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000045",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "42c088450dc7",
+      "conclusion": "success",
+      "durationSeconds": 291,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00048",
+      "timestamp": "2026-05-11T20:27:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-staging",
+      "runId": "18000000048",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "a437d1b06591",
+      "conclusion": "success",
+      "durationSeconds": 349,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00055",
+      "timestamp": "2026-05-12T08:16:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18000000055",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "feat/webhook-retry",
+      "commitSha": "66c1a28ae567",
+      "conclusion": "success",
+      "durationSeconds": 72,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00051",
+      "timestamp": "2026-05-12T09:07:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000051",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "main",
+      "commitSha": "4b9c54934b75",
+      "conclusion": "success",
+      "durationSeconds": 52,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00053",
+      "timestamp": "2026-05-12T17:13:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18000000053",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "6858a6846ed2",
+      "conclusion": "success",
+      "durationSeconds": 325,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00052",
+      "timestamp": "2026-05-12T17:44:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000052",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "feat/webhook-retry",
+      "commitSha": "e66e78f13fdb",
+      "conclusion": "success",
+      "durationSeconds": 56,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00054",
+      "timestamp": "2026-05-12T22:39:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-staging",
+      "runId": "18000000054",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "096a38c0d296",
+      "conclusion": "success",
+      "durationSeconds": 343,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00058",
+      "timestamp": "2026-05-13T10:57:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18000000058",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "2d110b5f7219",
+      "conclusion": "success",
+      "durationSeconds": 146,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00060",
+      "timestamp": "2026-05-13T16:21:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18000000060",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "5062fe096815",
+      "conclusion": "success",
+      "durationSeconds": 222,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00061",
+      "timestamp": "2026-05-13T18:22:00+08:00",
+      "platform": "github_actions",
+      "workflow": "nightly-security-scan",
+      "runId": "18000000061",
+      "repository": "acmefin/payments-api",
+      "trigger": "schedule",
+      "branch": "main",
+      "commitSha": "8d3fea1fbfbc",
+      "conclusion": "success",
+      "durationSeconds": 365,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00057",
+      "timestamp": "2026-05-13T18:55:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000057",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "feat/webhook-retry",
+      "commitSha": "c5e65f765bbb",
+      "conclusion": "success",
+      "durationSeconds": 239,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00059",
+      "timestamp": "2026-05-13T21:35:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-staging",
+      "runId": "18000000059",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "145a6d7eaa2e",
+      "conclusion": "success",
+      "durationSeconds": 316,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00056",
+      "timestamp": "2026-05-13T21:41:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000056",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "main",
+      "commitSha": "c6fc7f8ae931",
+      "conclusion": "failure",
+      "durationSeconds": 384,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "failure",
+        "build": "skipped"
+      }
+    },
+    {
+      "id": "gha-00064",
+      "timestamp": "2026-05-14T14:26:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18000000064",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "da599e9ff0a2",
+      "conclusion": "success",
+      "durationSeconds": 354,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00062",
+      "timestamp": "2026-05-14T15:56:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000062",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "main",
+      "commitSha": "8f7591737f93",
+      "conclusion": "success",
+      "durationSeconds": 122,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00066",
+      "timestamp": "2026-05-14T16:44:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18000000066",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "453fd0dc3163",
+      "conclusion": "success",
+      "durationSeconds": 119,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00065",
+      "timestamp": "2026-05-14T17:28:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-staging",
+      "runId": "18000000065",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "46f380679534",
+      "conclusion": "success",
+      "durationSeconds": 115,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00063",
+      "timestamp": "2026-05-14T17:57:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000063",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "main",
+      "commitSha": "2cf377c3b0a6",
+      "conclusion": "success",
+      "durationSeconds": 311,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00070",
+      "timestamp": "2026-05-15T10:08:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-staging",
+      "runId": "18000000070",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "88a237763a03",
+      "conclusion": "success",
+      "durationSeconds": 350,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00068",
+      "timestamp": "2026-05-15T11:46:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000068",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "feat/webhook-retry",
+      "commitSha": "d3fd12d28f97",
+      "conclusion": "success",
+      "durationSeconds": 200,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00067",
+      "timestamp": "2026-05-15T12:20:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000067",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "3c9d425e46f8",
+      "conclusion": "success",
+      "durationSeconds": 207,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00071",
+      "timestamp": "2026-05-15T14:14:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18000000071",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "feat/webhook-retry",
+      "commitSha": "28b100f40534",
+      "conclusion": "success",
+      "durationSeconds": 113,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00069",
+      "timestamp": "2026-05-15T21:47:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18000000069",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "8c2f024dcd50",
+      "conclusion": "success",
+      "durationSeconds": 141,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00072",
+      "timestamp": "2026-05-15T22:45:00+08:00",
+      "platform": "github_actions",
+      "workflow": "nightly-security-scan",
+      "runId": "18000000072",
+      "repository": "acmefin/payments-api",
+      "trigger": "schedule",
+      "branch": "main",
+      "commitSha": "c66131fb9ec1",
+      "conclusion": "success",
+      "durationSeconds": 287,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00077",
+      "timestamp": "2026-05-16T08:33:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18000000077",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "feat/webhook-retry",
+      "commitSha": "15b7897dcf3a",
+      "conclusion": "success",
+      "durationSeconds": 310,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00073",
+      "timestamp": "2026-05-16T11:10:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000073",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "main",
+      "commitSha": "d1329907aff2",
+      "conclusion": "success",
+      "durationSeconds": 183,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00074",
+      "timestamp": "2026-05-16T20:14:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000074",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "main",
+      "commitSha": "68bc5d21dc9e",
+      "conclusion": "success",
+      "durationSeconds": 135,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00076",
+      "timestamp": "2026-05-16T20:25:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-staging",
+      "runId": "18000000076",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "c2c067a03419",
+      "conclusion": "success",
+      "durationSeconds": 246,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00075",
+      "timestamp": "2026-05-16T21:55:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18000000075",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "a658b8ea4354",
+      "conclusion": "success",
+      "durationSeconds": 171,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00083",
+      "timestamp": "2026-05-17T09:16:00+08:00",
+      "platform": "github_actions",
+      "workflow": "nightly-security-scan",
+      "runId": "18000000083",
+      "repository": "acmefin/payments-api",
+      "trigger": "schedule",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "53f7063f4130",
+      "conclusion": "success",
+      "durationSeconds": 91,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-noise-001",
+      "timestamp": "2026-05-17T09:20:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18472891002",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "c3d81f0a2b1e",
+      "conclusion": "failure",
+      "durationSeconds": 198,
+      "jobs": {
+        "unit-tests": "failure"
+      },
+      "logsExcerpt": "FAIL tests/webhooks/retry.test.ts \u2014 timeout after 5000ms (flaky; rerun passed)"
+    },
+    {
+      "id": "gha-91024",
+      "timestamp": "2026-05-17T09:36:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18472930112",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "a4f91c2e8b3d",
+      "commitMessage": "minor utility cleanup",
+      "triggeredBy": "alex.chen@acmefin.dev",
+      "conclusion": "success",
+      "durationSeconds": 312,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "integration-tests": "success",
+        "build-image": "success",
+        "deploy-k8s": "success"
+      },
+      "deployment": {
+        "environment": "production",
+        "cluster": "acmefin-prod-ap-southeast-1",
+        "namespace": "payments",
+        "workload": "api-prod-01",
+        "image": "ghcr.io/acmefin/payments-api:a4f91c2",
+        "completedAt": "2026-05-17T09:36:48+08:00"
+      },
+      "security": {
+        "dependencyAudit": "not_run",
+        "newPackageAllowlistCheck": false,
+        "containerScan": "passed"
+      }
+    },
+    {
+      "id": "gha-00080",
+      "timestamp": "2026-05-17T16:39:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-main-build",
+      "runId": "18000000080",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "dependabot/npm_and_yarn/express-4.21.0",
+      "commitSha": "48d3a1ed5a38",
+      "conclusion": "success",
+      "durationSeconds": 375,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00078",
+      "timestamp": "2026-05-17T19:47:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000078",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "feat/webhook-retry",
+      "commitSha": "193d40613410",
+      "conclusion": "success",
+      "durationSeconds": 194,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00082",
+      "timestamp": "2026-05-17T20:20:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-production",
+      "runId": "18000000082",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "e848d76763a1",
+      "conclusion": "success",
+      "durationSeconds": 277,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00081",
+      "timestamp": "2026-05-17T21:05:00+08:00",
+      "platform": "github_actions",
+      "workflow": "deploy-staging",
+      "runId": "18000000081",
+      "repository": "acmefin/payments-api",
+      "trigger": "push",
+      "branch": "main",
+      "commitSha": "5c0afe4546ea",
+      "conclusion": "success",
+      "durationSeconds": 246,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    },
+    {
+      "id": "gha-00079",
+      "timestamp": "2026-05-17T21:25:00+08:00",
+      "platform": "github_actions",
+      "workflow": "ci-pr-checks",
+      "runId": "18000000079",
+      "repository": "acmefin/payments-api",
+      "trigger": "pull_request",
+      "branch": "feat/webhook-retry",
+      "commitSha": "ec35b2553dbb",
+      "conclusion": "success",
+      "durationSeconds": 261,
+      "jobs": {
+        "lint": "success",
+        "unit-tests": "success",
+        "build": "success"
+      }
+    }
+  ]
+}

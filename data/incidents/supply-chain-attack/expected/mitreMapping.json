@@ -1,0 +1,39 @@
+[
+  {
+    "id": "T1078",
+    "name": "Valid Accounts",
+    "tactic": "Initial Access",
+    "linkedEvidenceHints": [
+      "okta-ev-31847",
+      "185.199.108.153"
+    ]
+  },
+  {
+    "id": "T1552",
+    "name": "Unsecured Credentials",
+    "tactic": "Credential Access",
+    "linkedEvidenceHints": [
+      "vault-audit-29401",
+      "PROD_PAYMENT_GATEWAY_KEY"
+    ]
+  },
+  {
+    "id": "T1195",
+    "name": "Supply Chain Compromise",
+    "tactic": "Initial Access",
+    "linkedEvidenceHints": [
+      "gh-48291",
+      "a4f91c2e8b3d",
+      "lodash-utilz"
+    ]
+  },
+  {
+    "id": "T1041",
+    "name": "Exfiltration Over C2 Channel",
+    "tactic": "Exfiltration",
+    "linkedEvidenceHints": [
+      "flow-910882",
+      "45.77.88.21"
+    ]
+  }
+]

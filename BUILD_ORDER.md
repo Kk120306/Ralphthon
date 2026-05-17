@@ -16,9 +16,11 @@ Follow this order precisely. Do not skip steps.
 
 ## Phase 2 — Data and Logic Layer
 
-1. Read lib/mockIncident.ts — export typed mock incident data
-2. Read lib/agentPrompts.ts — export prompt builders for all 6 agents
-3. Read lib/fallbackInvestigation.ts — export complete hardcoded investigation result
+1. Verify raw logs exist: `data/incidents/supply-chain-attack/*.json` (run `python3 scripts/generate-mock-incident-data.py` if missing)
+2. `lib/mockIncident.ts` — load JSON logs from disk; `getEvidenceForAgent()` per agent
+3. `lib/agentPrompts.ts` — prompts reference raw evidence, not pre-labeled alerts
+4. `lib/runInvestigation.ts` — OpenAI orchestration
+5. `lib/fallbackInvestigation.ts` — reads `data/incidents/.../expected/` for demo-safe fallback
 
 The fallback must have:
 
@@ -33,8 +35,8 @@ The fallback must have:
 
 1. Create app/api/investigate/route.ts
 2. Implement the POST handler:
-  - Load mock incident data
-    - If OPENAI_API_KEY exists: call OpenAI for each agent in sequence
+  - `loadIncidentBundle()` + `runInvestigation()` from `data/incidents/supply-chain-attack/`
+    - If OPENAI_API_KEY exists: call OpenAI for each agent with `getEvidenceForAgent()` slices
     - Parse each agent JSON response
     - If any step fails: fall back to lib/fallbackInvestigation.ts
     - Return full investigation JSON

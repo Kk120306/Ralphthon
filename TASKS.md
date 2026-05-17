@@ -18,9 +18,14 @@ The app uses mock incident data but real OpenAI API analysis.
 
 ### 2. Mock Incident Data Module
 
-File: lib/mockIncident.ts
+File: `lib/mockIncident.ts`
 
-Export the mock incident data from MOCK_INCIDENT_DATA.md as a typed TypeScript object.
+Load raw logs from `data/incidents/supply-chain-attack/` (see `MOCK_INCIDENT_DATA.md`):
+
+- `loadIncidentBundle(scenarioId)` — reads `authEvents.json`, `secretsEvents.json`, `githubEvents.json`, `cicdEvents.json`, `networkEvents.json`, `threatIntel.json`, `packageManifests.json`, `incident.json`
+- `getEvidenceForAgent(agent, bundle)` — filters to investigation window and slices per agent (no `expected/` files)
+
+Do not embed pre-labeled alerts; agents analyze raw logs.
 
 ### 3. Agent Prompts Module
 
@@ -45,10 +50,10 @@ File: app/api/investigate/route.ts
 POST /api/investigate
 
 Logic:
-1. Load mock incident data
-2. Check for OPENAI_API_KEY
-3. If key exists: run each agent via OpenAI in sequence
-4. If key missing or error: return fallback investigation
+1. `loadIncidentBundle()` from `data/incidents/supply-chain-attack/`
+2. Check for `OPENAI_API_KEY`
+3. If key exists: for each agent, `getEvidenceForAgent()` → OpenAI with prompts from `lib/agentPrompts.ts`
+4. If key missing or error: `getFallbackInvestigation()` (reads `data/incidents/.../expected/`)
 5. Return JSON
 
 ### 6. Dashboard Layout

@@ -1,0 +1,21 @@
+{
+  "outcome": {
+    "rootCause": "Compromised developer account (alex.chen@acmefin.dev)",
+    "severity": "Critical",
+    "confidence": 84,
+    "riskScore": 84,
+    "incidentType": "Supply-Chain Attack"
+  },
+  "remediation": [
+    "Disable compromised developer account",
+    "Rotate production API keys",
+    "Remove suspicious dependency (lodash-utilz)",
+    "Pause deployment pipeline",
+    "Block suspicious outbound IP (45.77.88.21)",
+    "Review recent commits on main branch",
+    "Audit secrets access logs",
+    "Notify engineering and security team",
+    "Generate post-incident report"
+  ],
+  "_note": "For demo validation and fallback only \u2014 do not pass to investigation agents"
+}

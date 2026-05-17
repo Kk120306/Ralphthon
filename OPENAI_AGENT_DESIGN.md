@@ -2,39 +2,74 @@
 
 ## Goal
 
-Use OpenAI API to analyze mock security data and produce structured security investigation results.
+Use OpenAI API to analyze **raw mock security logs** and produce structured security investigation results.
 
-The mock incident data is static, but the agent reasoning is generated dynamically by the model.
+Log files live under `data/incidents/{scenarioId}/`. They are realistic exports (Okta, Vault, GitHub, VPC flow, etc.) with **no pre-labeled attack alerts**. Agents must discover anomalies themselves.
+
+The mock incident data is static; agent reasoning is generated dynamically by the model.
+
+## Data Layout
+
+```
+data/incidents/supply-chain-attack/
+├── incident.json              # Org + investigation window (agent-safe metadata)
+├── authEvents.json            # Okta-style authentication logs
+├── secretsEvents.json         # Vault audit logs
+├── githubEvents.json          # GitHub push/PR audit events
+├── cicdEvents.json            # GitHub Actions workflow runs
+├── networkEvents.json         # VPC flow logs
+├── threatIntel.json           # IOC feed
+├── packageManifests.json      # package.json snapshots (before/after)
+└── expected/                  # NEVER send to OpenAI — fallback/validation only
+    ├── mitreMapping.json
+    ├── attackChain.json
+    └── outcome.json
+```
+
+Regenerate logs: `python3 scripts/generate-mock-incident-data.py`
+
+See `MOCK_INCIDENT_DATA.md` and `data/incidents/supply-chain-attack/README.md`.
+
+## Logic Layer
+
+| File | Role |
+|------|------|
+| `lib/mockIncident.ts` | Load JSON from `data/incidents/`, filter to investigation window, slice per agent |
+| `lib/agentPrompts.ts` | System/user prompts; instruct models to analyze raw logs |
+| `lib/runInvestigation.ts` | Orchestrate OpenAI calls in sequence |
+| `lib/fallbackInvestigation.ts` | Deterministic result from `expected/` when API key missing or call fails |
+| `app/api/investigate/route.ts` | `POST /api/investigate` entry point |
 
 ## Recommended Flow
 
 Run in sequence:
-1. Intake Agent
-2. Auth Agent
-3. Code Agent
-4. Network Agent
-5. Master Correlation Agent
-6. Remediation Agent
-
-## Files to Create
-
-- lib/mockIncident.ts
-- lib/agentPrompts.ts
-- lib/fallbackInvestigation.ts
-- app/api/investigate/route.ts
+1. Intake Agent — all log sources in investigation window
+2. Auth Agent — `authEvents.json` + `secretsEvents.json` (window-filtered)
+3. Code Agent — `githubEvents.json` + `cicdEvents.json` + `packageManifests.json`
+4. Network Agent — `networkEvents.json` (anomalies + sample) + `threatIntel.json`
+5. Master Correlation Agent — specialist JSON outputs + incident metadata
+6. Remediation Agent — Master output
 
 ## API Route
 
-POST /api/investigate
+`POST /api/investigate`
+
+Optional body: `{ "scenarioId": "supply-chain-attack" }`
 
 Steps:
-1. Load mock incident data from lib/mockIncident.ts
-2. Check if OPENAI_API_KEY env var exists
-3. If key exists: call OpenAI API for each agent in sequence
-4. If key missing or API fails: return lib/fallbackInvestigation.ts result
-5. Return structured JSON
+1. `loadIncidentBundle()` from `data/incidents/{scenarioId}/`
+2. For each agent: `getEvidenceForAgent()` → `buildAgentPrompt()` → OpenAI
+3. If `OPENAI_API_KEY` missing or any step fails → `getFallbackInvestigation()`
+4. Return structured JSON
 
 Do not call OpenAI from the frontend. API key is server-side only.
+
+## Evidence Slicing (`lib/mockIncident.ts`)
+
+- **Window filter:** Events filtered to `incident.investigationWindow` (`from` / `to`).
+- **Network:** All flows ≥ 50MB in window plus top sampled smaller flows (full export is large).
+- **Intake:** Metadata + window-filtered counts/events from each source.
+- **Master / Remediation:** Prior agent findings, not raw `expected/` files.
 
 ## Response Shape
 
@@ -59,52 +94,6 @@ Do not call OpenAI from the frontend. API key is server-side only.
       "riskContribution": 24,
       "keyFindings": [],
       "severity": "Medium"
-    },
-    {
-      "agent": "Auth Agent",
-      "status": "complete",
-      "summary": "...",
-      "riskContribution": 35,
-      "keyFindings": [],
-      "mitreMappings": [],
-      "severity": "High"
-    },
-    {
-      "agent": "Code Agent",
-      "status": "complete",
-      "summary": "...",
-      "riskContribution": 58,
-      "keyFindings": [],
-      "mitreMappings": [],
-      "severity": "High"
-    },
-    {
-      "agent": "Network Agent",
-      "status": "complete",
-      "summary": "...",
-      "riskContribution": 76,
-      "keyFindings": [],
-      "mitreMappings": [],
-      "severity": "Critical"
-    },
-    {
-      "agent": "Master Correlation Agent",
-      "status": "complete",
-      "summary": "...",
-      "riskContribution": 84,
-      "timeline": [],
-      "severity": "Critical",
-      "confidence": 84
-    },
-    {
-      "agent": "Remediation Agent",
-      "status": "complete",
-      "summary": "...",
-      "containment": [],
-      "eradication": [],
-      "recovery": [],
-      "postIncident": [],
-      "checklist": []
     }
   ],
   "mitreMappings": [
@@ -119,6 +108,11 @@ Do not call OpenAI from the frontend. API key is server-side only.
     "timeline": [],
     "evidenceSummary": [],
     "recommendedActions": []
+  },
+  "meta": {
+    "dataSource": "data/incidents/supply-chain-attack/",
+    "scenarioId": "supply-chain-attack",
+    "usedOpenAI": true
   }
 }
 ```
@@ -126,20 +120,20 @@ Do not call OpenAI from the frontend. API key is server-side only.
 ## Agent Prompt Style
 
 Each specialist agent receives:
-- A role
-- An objective
-- Its slice of the mock incident data
+- Global instructions (analyze raw logs, do not assume pre-labeled attacks)
+- Role-specific task from `lib/agentPrompts.ts`
+- JSON evidence from `getEvidenceForAgent()` — loaded from `data/incidents/...`
 - Expected JSON output schema
-- Instruction to be realistic and analytical
-- Instruction to mention uncertainty where evidence is incomplete
+- Instruction to cite event IDs, timestamps, IPs, package names from evidence
 
-## Intake Agent Prompt
+Detailed prompt text: see `AGENT_PROMPTS.md` (if present) or `lib/agentPrompts.ts`.
 
-Role: You are a SOC Intake Agent.
+## Intake Agent
 
-Task: Analyze all raw security alerts. Decide whether they are related. Deduplicate noise, summarize the situation, assign an initial severity, and recommend whether deeper investigation is needed.
+**Evidence:** `incident.json` + window-filtered auth, secrets, github, cicd, network (sampled), threat intel summary.
 
-Return ONLY valid JSON:
+**Task:** Triage raw logs; group cross-domain signals; recommend escalation.
+
 ```json
 {
   "agent": "Intake Agent",
@@ -151,13 +145,10 @@ Return ONLY valid JSON:
 }
 ```
 
-## Auth Agent Prompt
+## Auth Agent
 
-Role: You are an Authentication Security Agent.
+**Evidence:** `authEvents.json`, `secretsEvents.json` (investigation window).
 
-Task: Analyze authentication logs and secret access logs. Look for unusual login location, unknown device, impossible travel, MFA anomalies, and suspicious access to secrets.
-
-Return ONLY valid JSON:
 ```json
 {
   "agent": "Auth Agent",
@@ -170,13 +161,10 @@ Return ONLY valid JSON:
 }
 ```
 
-## Code Agent Prompt
+## Code Agent
 
-Role: You are a Code Security Agent.
+**Evidence:** `githubEvents.json`, `cicdEvents.json`, `packageManifests.json`.
 
-Task: Analyze repository events and package changes. Look for suspicious dependency additions, typosquatting, unusual commits, and activity shortly after suspicious login.
-
-Return ONLY valid JSON:
 ```json
 {
   "agent": "Code Agent",
@@ -189,13 +177,10 @@ Return ONLY valid JSON:
 }
 ```
 
-## Network Agent Prompt
+## Network Agent
 
-Role: You are a Network Security Agent.
+**Evidence:** `networkEvents.json` (prioritized flows), `threatIntel.json`.
 
-Task: Analyze network logs. Look for large outbound transfers, unknown destination IPs, unapproved countries, and possible data exfiltration. Mention uncertainty if evidence is insufficient.
-
-Return ONLY valid JSON:
 ```json
 {
   "agent": "Network Agent",
@@ -208,13 +193,10 @@ Return ONLY valid JSON:
 }
 ```
 
-## Master Correlation Agent Prompt
+## Master Correlation Agent
 
-Role: You are the Master Correlation Agent.
+**Evidence:** Specialist agent JSON outputs + incident metadata.
 
-Task: Analyze findings from all specialist agents. Correlate evidence into a single attack narrative. Identify root cause, final severity, confidence, and attack chain.
-
-Return ONLY valid JSON:
 ```json
 {
   "agent": "Master Correlation Agent",
@@ -229,13 +211,10 @@ Return ONLY valid JSON:
 }
 ```
 
-## Remediation Agent Prompt
+## Remediation Agent
 
-Role: You are the Remediation Agent.
+**Evidence:** Master Correlation Agent output.
 
-Task: Given the correlated incident report, generate concrete containment, eradication, recovery, and post-incident actions.
-
-Return ONLY valid JSON:
 ```json
 {
   "agent": "Remediation Agent",
@@ -250,8 +229,12 @@ Return ONLY valid JSON:
 
 ## Fallback Requirement
 
-If OpenAI API is unavailable or fails, return pre-written deterministic output from lib/fallbackInvestigation.ts.
+If OpenAI API is unavailable or fails, return `getFallbackInvestigation()` which reads:
 
-The fallback must be complete — every field populated, risk score at 84%, all agents complete.
+- `data/incidents/{scenarioId}/expected/attackChain.json`
+- `data/incidents/{scenarioId}/expected/mitreMapping.json`
+- `data/incidents/{scenarioId}/expected/outcome.json`
 
-This is required for demo safety. The demo must not break if the API key is missing.
+The fallback must be complete — every field populated, risk score 84%, all agents complete.
+
+This is required for demo safety.

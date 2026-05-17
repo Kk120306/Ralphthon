@@ -1,0 +1,36 @@
+{
+  "source": "repository_file_snapshot",
+  "repository": "acmefin/payments-api",
+  "branch": "main",
+  "snapshots": [
+    {
+      "capturedAt": "2026-05-17T09:25:00+08:00",
+      "commitSha": "c3d81f0a2b1e",
+      "package.json": {
+        "name": "payments-api",
+        "version": "2.14.0",
+        "dependencies": {
+          "express": "^4.21.0",
+          "lodash-utils": "^1.2.0",
+          "stripe": "^14.0.0",
+          "pg": "^8.11.0"
+        }
+      }
+    },
+    {
+      "capturedAt": "2026-05-17T09:32:00+08:00",
+      "commitSha": "a4f91c2e8b3d",
+      "package.json": {
+        "name": "payments-api",
+        "version": "2.14.0",
+        "dependencies": {
+          "express": "^4.21.0",
+          "lodash-utils": "^1.2.0",
+          "lodash-utilz": "^2.1.4",
+          "stripe": "^14.0.0",
+          "pg": "^8.11.0"
+        }
+      }
+    }
+  ]
+}
