@@ -1,0 +1,16 @@
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "IncidentIQ — Autonomous AI SOC",
+  description: "Demo-ready autonomous AI SOC dashboard for supply-chain attack investigation.",
+  icons: { icon: "/favicon.svg" },
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="en" className="dark">
+      <body className="noise antialiased">{children}</body>
+    </html>
+  );
+}

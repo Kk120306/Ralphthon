@@ -1,7 +1,7 @@
 import { readFileSync, existsSync } from "fs";
 import { join } from "path";
 import { DEFAULT_SCENARIO_ID } from "./mockIncident";
-import type { AgentFinding, InvestigationResponse, MitreMapping } from "./types/investigation";
+import type { AgentFinding, InvestigationResponse, MitreMapping, MockPrResult } from "./types/investigation";
 
 function readExpected<T>(scenarioId: string, file: string): T {
   const path = join(process.cwd(), "data", "incidents", scenarioId, "expected", file);
@@ -9,6 +9,48 @@ function readExpected<T>(scenarioId: string, file: string): T {
     throw new Error(`Expected data file not found: ${path}`);
   }
   return JSON.parse(readFileSync(path, "utf-8")) as T;
+}
+
+
+export function getDeterministicMockPrResult(): MockPrResult {
+  return {
+    source: "deterministic-fallback",
+    title: "Remove suspicious lodash-utilz dependency and lock trusted utility package",
+    summary:
+      "Reverts the typosquatted lodash-utilz package introduced in the suspicious dependency update, restores the trusted lodash-utils dependency, and adds a package-manager guard so future lookalike packages fail validation before deploy.",
+    filesChanged: [
+      { path: "package.json", changeType: "modified" },
+      { path: "package-lock.json", changeType: "modified" },
+      { path: "scripts/validate-dependencies.js", changeType: "added" },
+    ],
+    patch: `diff --git a/package.json b/package.json
+@@
+-    "lodash-utilz": "^1.0.4"
++    "lodash-utils": "^1.0.4"
+@@
+-    "build": "tsc && node dist/server.js"
++    "prebuild": "node scripts/validate-dependencies.js",
++    "build": "tsc && node dist/server.js"
+diff --git a/scripts/validate-dependencies.js b/scripts/validate-dependencies.js
+new file mode 100644
+@@
++const blocked = ["lodash-utilz"];
++const pkg = require("../package.json");
++const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) };
++const found = blocked.filter((name) => deps[name]);
++if (found.length) {
++  console.error("Blocked suspicious dependencies: " + found.join(", "));
++  process.exit(1);
++}
++console.log("Dependency allowlist check passed");`,
+    riskRemovalExplanation:
+      "The patch removes the lookalike package that likely executed in production after gha-91024 and replaces it with the intended trusted package name. The validation hook blocks the known malicious dependency before future CI/CD builds can ship it.",
+    validationNotes: [
+      "Run npm install to refresh package-lock.json after dependency replacement",
+      "Run npm run prebuild to confirm lodash-utilz is blocked",
+      "Run unit tests and production build before unpausing deployment",
+    ],
+  };
 }
 
 /** Deterministic investigation result from `data/incidents/{id}/expected/` — demo-safe when OpenAI is unavailable. */
@@ -154,6 +196,7 @@ export function getFallbackInvestigation(
       ],
       recommendedActions: remediation,
     },
+    mockPrResult: getDeterministicMockPrResult(),
     meta: {
       dataSource: `data/incidents/${scenarioId}/`,
       scenarioId,

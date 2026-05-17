@@ -1,6 +1,6 @@
 import { readFileSync, existsSync, readdirSync, statSync } from "fs";
 import { join } from "path";
-import type { AgentKey, IncidentBundle, IncidentMeta, LogFile } from "./types/investigation";
+import type { AgentKey, IncidentBundle, IncidentMeta, LogFile, RawTimelineEvent } from "./types/investigation";
 
 export const DEFAULT_SCENARIO_ID = "supply-chain-attack";
 
@@ -195,4 +195,101 @@ export function listScenarioIds(): string[] {
   const root = join(process.cwd(), "data", "incidents");
   if (!existsSync(root)) return [];
   return readdirSync(root).filter((name) => statSync(join(root, name)).isDirectory());
+}
+
+function shortTime(timestamp: string): string {
+  return timestamp.slice(11, 19);
+}
+
+function findById<T extends { id?: string }>(events: T[] | undefined, id: string): T | undefined {
+  return events?.find((event) => event.id === id);
+}
+
+function formatGb(bytes: number): string {
+  return `${(bytes / 1024 ** 3).toFixed(1)}GB`;
+}
+
+function addedDependencies(bundle: IncidentBundle): string[] {
+  const snapshots = bundle.packageManifests.snapshots as
+    | Array<{ "package.json"?: { dependencies?: Record<string, string> } }>
+    | undefined;
+  const before = snapshots?.[0]?.["package.json"]?.dependencies ?? {};
+  const after = snapshots?.[1]?.["package.json"]?.dependencies ?? {};
+  return Object.keys(after).filter((name) => !before[name]);
+}
+
+/** Raw scenario timeline shown in the UI. This is source evidence, not generated findings. */
+export function getRawTimelineEvents(
+  scenarioId: string = DEFAULT_SCENARIO_ID,
+): RawTimelineEvent[] {
+  const bundle = loadIncidentBundle(scenarioId);
+  const authEvent = findById(bundle.authEvents.events, "okta-ev-31847");
+  const secretEvent = findById(bundle.secretsEvents.events, "vault-audit-29401");
+  const githubEvent = findById(bundle.githubEvents.events, "gh-48291");
+  const cicdEvent = findById(bundle.cicdEvents.events, "gha-91024");
+  const networkEvents = (bundle.networkEvents.events ?? []) as Array<
+    Record<string, unknown> & { timestamp: string; bytesOut?: number; dstAddr?: string }
+  >;
+  const networkEvent = networkEvents
+    .filter((event) => typeof event.bytesOut === "number")
+    .sort((a, b) => (b.bytesOut ?? 0) - (a.bytesOut ?? 0))[0];
+  const dependency = addedDependencies(bundle)[0] ?? "new dependency";
+
+  const events: RawTimelineEvent[] = [];
+  if (authEvent) {
+    const actor = authEvent.actor as { email?: string } | undefined;
+    const client = authEvent.client as
+      | {
+          ipAddress?: string;
+          device?: string;
+          geographicalContext?: { city?: string };
+        }
+      | undefined;
+    events.push({
+      time: shortTime(authEvent.timestamp as string),
+      source: "Auth",
+      text: `${actor?.email ?? "Developer"} login from ${client?.geographicalContext?.city ?? "unknown location"} (${client?.ipAddress ?? "unknown IP"}) on ${client?.device ?? "unknown device"}`,
+      severity: "HIGH",
+    });
+  }
+  if (secretEvent) {
+    const secret = secretEvent.secret as { name?: string } | undefined;
+    const request = secretEvent.request as { remoteAddress?: string } | undefined;
+    events.push({
+      time: shortTime(secretEvent.timestamp as string),
+      source: "Secrets",
+      text: `${secret?.name ?? "Production secret"} accessed${request?.remoteAddress ? ` from ${request.remoteAddress}` : ""}`,
+      severity: "HIGH",
+    });
+  }
+  if (githubEvent) {
+    const payload = githubEvent.payload as
+      | { commits?: Array<{ sha?: string; message?: string }> }
+      | undefined;
+    const commit = payload?.commits?.[0];
+    events.push({
+      time: shortTime(githubEvent.timestamp as string),
+      source: "GitHub",
+      text: `Commit ${commit?.sha ?? "unknown"} adds dependency ${dependency}`,
+      severity: "CRITICAL",
+    });
+  }
+  if (cicdEvent) {
+    events.push({
+      time: shortTime(cicdEvent.timestamp as string),
+      source: "CI/CD",
+      text: `${String(cicdEvent.workflow ?? "deployment")} workflow completed ${String(cicdEvent.conclusion ?? "unknown")}`,
+      severity: "HIGH",
+    });
+  }
+  if (networkEvent) {
+    events.push({
+      time: shortTime(networkEvent.timestamp),
+      source: "Network",
+      text: `${formatGb(networkEvent.bytesOut ?? 0)} outbound HTTPS to ${networkEvent.dstAddr ?? "unknown destination"}`,
+      severity: "CRITICAL",
+    });
+  }
+
+  return events.sort((a, b) => a.time.localeCompare(b.time));
 }

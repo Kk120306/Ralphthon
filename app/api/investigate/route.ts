@@ -1,8 +1,19 @@
 import { NextResponse } from "next/server";
 import { runInvestigation } from "@/lib/runInvestigation";
-import { DEFAULT_SCENARIO_ID } from "@/lib/mockIncident";
+import { DEFAULT_SCENARIO_ID, getRawTimelineEvents } from "@/lib/mockIncident";
 
 export const runtime = "nodejs";
+
+export async function GET(request: Request) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const scenarioId = searchParams.get("scenarioId") ?? DEFAULT_SCENARIO_ID;
+    return NextResponse.json({ rawTimeline: getRawTimelineEvents(scenarioId) });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Timeline load failed";
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
+}
 
 export async function POST(request: Request) {
   try {

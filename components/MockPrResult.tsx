@@ -1,0 +1,6 @@
+import type { MockPrResult as MockPr } from "@/lib/types/investigation";
+
+export function MockPrResult({ pr }: { pr?: MockPr }) {
+  if (!pr) return null;
+  return <section className="min-w-0 border-t border-line p-4 sm:p-6"><div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"><h2 className="font-semibold">Mock remediation PR</h2><span className="w-fit rounded border border-cobalt/30 bg-cobalt/10 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-cobalt">{pr.source}</span></div><article className="min-w-0 rounded-xl border border-line bg-white/[0.025] p-4"><h3 className="break-words text-sm font-semibold text-slate-100">{pr.title}</h3><p className="mt-2 break-words text-xs leading-5 text-slate-400">{pr.summary}</p><div className="mt-4 flex flex-wrap gap-2">{pr.filesChanged.map((f) => <span key={f.path} className="max-w-full break-all rounded-md border border-white/10 px-2 py-1 font-mono text-[11px] text-slate-400">{f.changeType}: {f.path}</span>)}</div><pre className="thin-scrollbar mt-4 max-h-52 max-w-full overflow-auto rounded-lg border border-line bg-black/40 p-3 text-[11px] leading-5 text-slate-300">{pr.patch}</pre><p className="mt-3 break-words text-xs text-slate-400">{pr.riskRemovalExplanation}</p></article></section>;
+}

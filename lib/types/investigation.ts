@@ -33,6 +33,23 @@ export interface AgentFinding {
   checklist?: string[];
 }
 
+export interface MockPrResult {
+  source: "openai" | "deterministic-fallback";
+  title: string;
+  summary: string;
+  filesChanged: Array<{ path: string; changeType: "modified" | "removed" | "added" }>;
+  patch: string;
+  riskRemovalExplanation: string;
+  validationNotes: string[];
+}
+
+export interface RawTimelineEvent {
+  time: string;
+  source: string;
+  text: string;
+  severity: "HIGH" | "CRITICAL";
+}
+
 export interface InvestigationResponse {
   incidentName: string;
   severity: string;
@@ -49,6 +66,7 @@ export interface InvestigationResponse {
     evidenceSummary: string[];
     recommendedActions: string[];
   };
+  mockPrResult: MockPrResult;
   meta?: {
     dataSource: string;
     scenarioId: string;
