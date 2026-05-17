@@ -11,16 +11,17 @@ Follow this order precisely. Do not skip steps.
 1. Initialize Next.js project with TypeScript and Tailwind CSS
 2. Install dependencies: openai, lucide-react, shadcn/ui (or manually add components)
 3. Configure Tailwind for dark mode (class strategy)
-4. Set up .env.local.example with OPENAI_API_KEY=your-key-here
+4. Take a look at the env file to verify Open api key is present
 5. Verify app builds with no errors before continuing
 
 ## Phase 2 — Data and Logic Layer
 
-6. Create lib/mockIncident.ts — export typed mock incident data
-7. Create lib/agentPrompts.ts — export prompt builders for all 6 agents
-8. Create lib/fallbackInvestigation.ts — export complete hardcoded investigation result
+1. Read lib/mockIncident.ts — export typed mock incident data
+2. Read lib/agentPrompts.ts — export prompt builders for all 6 agents
+3. Read lib/fallbackInvestigation.ts — export complete hardcoded investigation result
 
 The fallback must have:
+
 - All 6 agentFindings with status "complete"
 - riskScore: 84
 - All 4 attackChain steps
@@ -30,50 +31,57 @@ The fallback must have:
 
 ## Phase 3 — API Route
 
-9. Create app/api/investigate/route.ts
-10. Implement the POST handler:
-    - Load mock incident data
+1. Create app/api/investigate/route.ts
+2. Implement the POST handler:
+  - Load mock incident data
     - If OPENAI_API_KEY exists: call OpenAI for each agent in sequence
     - Parse each agent JSON response
     - If any step fails: fall back to lib/fallbackInvestigation.ts
     - Return full investigation JSON
-11. Test the route manually: curl -X POST http://localhost:3000/api/investigate
-12. Verify it returns valid JSON in both OpenAI and fallback mode
+3. Test the route manually: curl -X POST [http://localhost:3000/api/investigate](http://localhost:3000/api/investigate)
+4. Verify it returns valid JSON in both OpenAI and fallback mode
 
 ## Phase 4 — UI Components
 
 Build components in this order:
 
-13. types/investigation.ts — TypeScript types for the full response shape
-14. components/AgentCard.tsx — single agent status card
-15. components/RiskScorePanel.tsx — animated risk score
-16. components/AttackChain.tsx — 4-node chain visualization
-17. components/ReasoningFeed.tsx — scrollable live feed
-18. components/MitreCards.tsx — MITRE ATT&CK mapping cards
-19. components/RemediationChecklist.tsx — interactive checklist
-20. components/FinalReport.tsx — final incident report panel
+1. types/investigation.ts — TypeScript types for the full response shape
+2. components/AgentCard.tsx — single agent status card
+3. components/RiskScorePanel.tsx — animated risk score
+4. components/AttackChain.tsx — 4-node chain visualization
+5. components/ReasoningFeed.tsx — scrollable live feed
+6. components/MitreCards.tsx — MITRE ATT&CK mapping cards
+7. components/RemediationChecklist.tsx — interactive checklist
+8. components/FinalReport.tsx — final incident report panel
 
 ## Phase 5 — Main Dashboard Page
 
-22. Build app/page.tsx as the main dashboard
-23. Implement state machine: idle | investigating | complete
-24. Wire Run Scenario button to POST /api/investigate
-25. Implement progressive reveal with 1500ms delay between agents
-26. Wire risk score to update at each agent reveal
-27. Wire attack chain nodes to activate progressively
-28. Wire Reset button to clear all state
+1. Build app/page.tsx as the main dashboard
+2. Use `Dashboard.png` as the primary frontend reference while building the page:
+  - Follow the same three-column SOC dashboard composition
+  - Left rail: incident list and agent progress/status cards
+  - Center: raw event timeline, live agent reasoning stream, and attack chain cards
+  - Right rail: risk score, final incident report, and remediation actions
+  - Match the compact dark enterprise style, red critical accents, monospace event/timing details, subtle borders, and polished demo-ready density
+3. Add more components if required to match `Dashboard.png`
+4. Implement state machine: idle | investigating | complete
+5. Wire Run Scenario button to POST /api/investigate
+6. Implement progressive reveal with 1500ms delay between agents
+7. Wire risk score to update at each agent reveal
+8. Wire attack chain nodes to activate progressively
+9. Wire Reset button to clear all state
 
 ## Phase 6 — Polish and Verify
 
-29. Verify dark mode looks correct
-30. Verify all 6 agents complete in sequence
-31. Verify risk score reaches 84%
-32. Verify attack chain fully activates
-34. Verify Reset returns everything to idle
-35. Run TypeScript type check: npx tsc --noEmit
-36. Run build: npm run build
-37. Fix any errors
+1. Verify dark mode looks correct
+2. Verify all 6 agents complete in sequence
+3. Verify risk score reaches 84%
+4. Verify attack chain fully activates
+5. Verify Reset returns everything to idle
+6. Run TypeScript type check: npx tsc --noEmit
+7. Run build: npm run build
+8. Fix any errors
 
 ## Done
 
-The build is complete when all items in the Definition of Done in RALPH_GOAL.md are checked off.
+The build is complete when all items in the Definition of Done in CODEX_GOAL.md are checked off.

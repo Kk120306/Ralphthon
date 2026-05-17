@@ -86,6 +86,7 @@ Generate containment, eradication, recovery, and post-incident actions. Output f
 
 Dark mode. Enterprise SaaS. Cybersecurity aesthetic.
 Reference: Linear, Datadog, CrowdStrike, Wiz, Vercel.
+Primary visual reference: `Dashboard.png`. The frontend should follow its dashboard composition, dark SOC styling, dense panels, red critical states, agent reasoning stream, right-side incident report/remediation column, and enterprise-grade polish.
 Keywords: clean, serious, high-signal, premium, not cartoonish.
 
 ## Non-Goals

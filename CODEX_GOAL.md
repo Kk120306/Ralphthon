@@ -1,4 +1,4 @@
-# RALPH_GOAL.md
+# CODEX_GOAL.md
 
 ## Objective
 
@@ -7,10 +7,11 @@ Build Sentinel Swarm — a demo-ready, OpenAI-powered autonomous AI SOC dashboar
 ## Read These Files First (in order)
 
 1. AGENTS.md — product agents and architecture rules
-2. SPEC.md — full product specification
-3. TASKS.md — complete build task list
-4. OPENAI_AGENT_DESIGN.md — OpenAI prompts and API route design
-5. MOCK_INCIDENT_DATA.md — the mock security incident to investigate
+2. Dashboard.png — primary visual reference for the frontend dashboard
+3. SPEC.md — full product specification
+4. TASKS.md — complete build task list
+5. OPENAI_AGENT_DESIGN.md — OpenAI prompts and API route design
+6. MOCK_INCIDENT_DATA.md — the mock security incident to investigate
 7. DEMO_FLOW.md — how the demo should flow from the presenter's perspective
 8. BUILD_ORDER.md — the exact order to build things
 
@@ -43,6 +44,8 @@ POST /api/investigate
 Returns structured JSON with all agent findings, attack chain, MITRE mappings, remediation checklist, and final report.
 
 ## Required UI
+
+Build the dashboard to closely follow `Dashboard.png` as the primary visual reference. Preserve the same overall information architecture: left incident/agent rail, central raw timeline + live reasoning + attack chain, and right risk/report/remediation column. Match the dark enterprise SOC aesthetic, compact density, red critical accents, monospace event details, and polished high-signal dashboard feel.
 
 Dark enterprise cybersecurity dashboard with:
 - Header
