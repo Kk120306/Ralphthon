@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This file tells the AI agent the exact order to build Sentinel Swarm so the demo works reliably on the first run.
+This file tells the AI agent the exact order to build IncidentIQ so the demo works reliably on the first run.
 
 Follow this order precisely. Do not skip steps.
 

@@ -2,7 +2,7 @@
 
 ## Build Objective
 
-Build Sentinel Swarm, a demo-ready OpenAI-powered AI SOC dashboard.
+Build IncidentIQ, a demo-ready OpenAI-powered AI SOC dashboard.
 
 The app uses mock incident data but real OpenAI API analysis.
 
@@ -56,7 +56,7 @@ Logic:
 Dark mode enterprise cybersecurity dashboard.
 
 Required elements:
-- Header: "Sentinel Swarm" + "Autonomous AI SOC for Startups"
+- Header: "IncidentIQ" + "Autonomous AI SOC for Startups"
 - Incident badge: "AcmeFin — Supply-Chain Attack"
 - Run Scenario button (primary, prominent)
 - Reset button

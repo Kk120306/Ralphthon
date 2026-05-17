@@ -1,4 +1,4 @@
-# SPEC.md — Sentinel Swarm Product Specification
+# SPEC.md — IncidentIQ Product Specification
 
 ## Tagline
 
@@ -6,11 +6,11 @@ Autonomous AI SOC for Startups
 
 ## One-Liner
 
-Sentinel Swarm turns fragmented startup security alerts into a coordinated AI investigation.
+IncidentIQ turns fragmented startup security alerts into a coordinated AI investigation.
 
 ## Executive Summary
 
-Sentinel Swarm is an OpenAI-powered cybersecurity operations demo for startups.
+IncidentIQ is an OpenAI-powered cybersecurity operations demo for startups.
 
 It simulates how a real security team investigates an incident by using specialized AI agents to analyze different evidence sources: authentication logs, secret access logs, repository activity, dependency changes, and network traffic logs.
 
@@ -30,11 +30,11 @@ This means coordinated attacks can be missed because each individual alert looks
 
 ## Solution
 
-Sentinel Swarm acts like an AI-powered security team.
+IncidentIQ acts like an AI-powered security team.
 
 Specialized agents investigate individual evidence sources. A Master Correlation Agent connects the dots.
 
-Instead of showing isolated alerts, Sentinel Swarm reconstructs the full attack chain.
+Instead of showing isolated alerts, IncidentIQ reconstructs the full attack chain.
 
 ## MVP Scenario
 

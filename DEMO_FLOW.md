@@ -10,7 +10,7 @@ Individually, each alert looks small.
 
 But together, they reveal a serious supply-chain attack.
 
-Sentinel Swarm acts like an autonomous AI SOC team that investigates and connects the dots."
+IncidentIQ acts like an autonomous AI SOC team that investigates and connects the dots."
 
 ## Demo Step 1 — Idle Dashboard (0:00)
 
@@ -63,12 +63,12 @@ Risk score: 76% → 84% — Critical Risk
 
 ## Demo Step 9 — Final Report (2:15)
 
-"By the end, Sentinel Swarm has done what a real SOC team would do: detect, investigate, correlate, explain, and recommend action."
+"By the end, IncidentIQ has done what a real SOC team would do: detect, investigate, correlate, explain, and recommend action."
 
 Show the final incident report.
 
 ## Closing Line (2:30)
 
-"Sentinel Swarm turns fragmented startup security alerts into a coordinated AI investigation — giving small teams the visibility and response capabilities of a full security operations center."
+"IncidentIQ turns fragmented startup security alerts into a coordinated AI investigation — giving small teams the visibility and response capabilities of a full security operations center."
 
 Total demo time: under 3 minutes.

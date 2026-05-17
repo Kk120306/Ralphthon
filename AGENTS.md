@@ -2,7 +2,7 @@
 
 ## Project Name
 
-Sentinel Swarm
+IncidentIQ
 
 ## Tagline
 
@@ -10,7 +10,7 @@ Autonomous AI SOC for Startups
 
 ## Project Summary
 
-Sentinel Swarm is a hackathon MVP that demonstrates how AI agents can act like a small security operations team.
+IncidentIQ is a hackathon MVP that demonstrates how AI agents can act like a small security operations team.
 
 The app uses mock security data, but the investigation should be performed by real OpenAI-powered agents.
 
@@ -32,7 +32,7 @@ Individually, each alert may not look critical.
 
 Together, they reveal a supply-chain attack caused by a compromised developer account.
 
-Sentinel Swarm investigates this incident using multiple AI agents.
+IncidentIQ investigates this incident using multiple AI agents.
 
 ## Required Product Agents
 
