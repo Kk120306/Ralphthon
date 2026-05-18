@@ -232,25 +232,6 @@ The supply-chain attack scenario maps to four confirmed techniques:
 
 ---
 
-## 🎯 What's Real
-
-This is a hackathon MVP. Here's an honest breakdown of what is and isn't real:
-
-**✅ Real**
-- OpenAI API calls for every agent (genuinely different output each run)
-- Sequential agent chaining — Master Agent receives specialist outputs, not raw logs
-- Realistic mock log fixtures generated from real log schemas (Okta, Vault, GitHub, VPC)
-- MITRE ATT&CK framework mappings
-- Deterministic fallback for demo reliability
-- `lodash-utilz` typosquat detection (real attack pattern)
-
-**🔶 Simulated for MVP**
-- Log ingestion from live sources (CloudTrail, Okta, Splunk)
-- GitHub PR creation (shown as AI-generated diff output, no real GitHub API calls)
-- Real-time streaming of agent tokens (results returned in one batch, revealed progressively)
-
----
-
 ## 📋 API Reference
 
 ### `POST /api/investigate`
@@ -280,22 +261,6 @@ Runs the full multi-agent investigation pipeline.
   "meta": { "usedOpenAI": true, "scenarioId": "supply-chain-attack" }
 }
 ```
-
----
-
-## 🗺️ Roadmap
-
-The gap between this MVP and a production SOC platform is real integrations. The intelligence layer is already real.
-
-- [ ] Live log ingestion (CloudTrail, Okta, Splunk webhooks)
-- [ ] Real GitHub dependency scanning via GitHub API (public repos, no auth)
-- [ ] OSV.dev CVE lookup on detected packages
-- [ ] Auth log upload (CSV/JSON) with deterministic anomaly detection
-- [ ] Second and third incident scenarios (Insider Data Leak, Ransomware Staging)
-- [ ] False positive path — Master Agent concludes "insufficient evidence"
-- [ ] Export incident report as PDF
-- [ ] Human-in-the-loop approval for remediation actions
-
 ---
 
 ## 👥 Team
